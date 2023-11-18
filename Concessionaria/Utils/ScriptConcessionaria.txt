@@ -1,0 +1,132 @@
+CREATE TABLE marca (
+  IdMarca int NOT NULL IDENTITY PRIMARY KEY (IdMarca),
+  Descricao varchar(200) NOT NULL
+)
+
+CREATE TABLE modelo (
+  Descricao varchar(100) NOT NULL,
+  MarcaID int NOT NULL,
+  IdModelo int NOT NULL IDENTITY PRIMARY KEY,
+  CONSTRAINT fK_modelo_marca FOREIGN KEY (MarcaID) REFERENCES marca (IdMarca)
+)
+
+CREATE TABLE versao (
+  Descricao varchar(100) NOT NULL,
+  ModeloID int NOT NULL,
+  IdVersao int NOT NULL PRIMARY KEY,
+  CONSTRAINT fk_versao_modelo FOREIGN KEY (ModeloID) REFERENCES modelo (IdModelo)
+)
+
+insert into marca(Descricao) values ('Toyota1');
+insert into marca(Descricao) values ('Volksvagem');
+
+insert into modelo(Descricao,MarcaID) values ('Hilux',1);
+insert into modelo(Descricao,MarcaID) values ('Gol',2);
+insert into modelo(Descricao,MarcaID) values ('Corola1',1);
+
+insert into versao(Descricao,ModeloID,IdVersao) values ('4x4 2.8 turbo SW4',1,1);
+insert into versao(Descricao,ModeloID,IdVersao) values ('XLI 1.6',2,3);
+insert into versao(Descricao,ModeloID,IdVersao) values ('1.6 MI',3,4);
+
+CREATE TABLE blindagem(
+	[IdBlindagem] INT NOT NULL PRIMARY KEY,
+	[Descricao] VARCHAR(200) NOT NULL,
+)
+
+insert into blindagem(IdBlindagem,Descricao) values (2,'I-III - Tiro de Fuzil M16, AK-47 e FAL');
+
+CREATE TABLE categoria(
+	[IdCategoria] INT NOT NULL PRIMARY KEY,
+	[Descricao] VARCHAR(100) NOT NULL,
+)
+
+insert into categoria(IdCategoria,Descricao) values (5,'Novos');
+
+CREATE TABLE cor (
+	[IdCor] INT NOT NULL PRIMARY KEY,
+	[Nome] VARCHAR(200) NOT NULL,
+)
+
+insert into cor(IdCor,Nome) values (2,'Preto');
+
+CREATE TABLE opcional
+(
+	[IdOpcional] INT NOT NULL PRIMARY KEY,
+	[Descricao] VARCHAR(200) NOT NULL
+)
+
+insert into opcional(Descricao,IdOpcional) values ('Vidro El trico',1);
+
+CREATE TABLE usuario(
+	[IdUsuario] INT NOT NULL PRIMARY KEY,
+	[Email] VARCHAR(100) NOT NULL,
+	[Senha] VARCHAR(250) NOT NULL,
+	[DataCadastro] DATETIME NOT NULL,
+	[DataUltimoAcesso] DATETIME NOT NULL,
+	[Ativo] TINYINT NOT NULL,
+)
+
+insert into usuario(Email,IdUsuario,Senha,DataCadastro,DataUltimoAcesso,Ativo) values ('admin@hotmail.com',1,'7C4A8D09CA3762AF61E59520943DC26494F8941B','2023-10-14 14:47:24','2023-10-27 15:53:24',1);
+
+CREATE TABLE combustivel(
+	[IdCombustivel] INT NOT NULL PRIMARY KEY,
+	[Descricao] VARCHAR(200) NOT NULL
+)
+
+insert into combustivel(Descricao,IdCombustivel) values ('Gasolina',2);
+
+CREATE TABLE cambio(
+	[IdCambio] INT NOT NULL PRIMARY KEY,
+	[Descricao] VARCHAR(200) NOT NULL,
+)
+
+insert into cambio(IdCambio,Descricao) values (2,'Manual');
+
+CREATE TABLE veiculo
+(
+	[IdVeiculo] INT NOT NULL PRIMARY KEY,
+	[AnoFabricacao] INT DEFAULT NULL,
+	[AnoModelo] INT DEFAULT NULL,
+	[BlindagemID] INT NOT NULL,
+	[CambioID] INT NOT NULL,
+	[CombustivelID] INT NOT NULL,
+	[CorID] INT NOT NULL,
+	[VersaoID] INT NOT NULL,
+	[Placa] varchar(10) NOT NULL,
+	[Portas] INT DEFAULT NULL,
+	[Quilometragem] INT DEFAULT NULL,
+	[PrecoNormal] decimal(18,2) NOT NULL,
+	[Acessos] INT NOT NULL,
+	[Destaque] tinyint NOT NULL,
+	[DataCadastro] datetime NOT NULL,
+	[Descricao] varchar(3000) DEFAULT NULL,
+	[AceitaPermuta] tinyint NOT NULL,
+	[VeiculoComDivida] tinyint NOT NULL,
+	[CondicaoPagamento] varchar(250) DEFAULT NULL,
+	[Ranking] decimal(18,2) DEFAULT NULL,
+	[PrecoPromocional] decimal(18,2) NOT NULL,
+	[UsuarioID] INT NOT NULL,
+	[QtdeEstoque] INT NOT NULL,
+	[CategoriaID] INT NOT NULL, 
+    CONSTRAINT [FK_veiculo_ToTable_blindagem] FOREIGN KEY ([BlindagemID]) REFERENCES [blindagem]([IdBlindagem]), 
+    CONSTRAINT [FK_veiculo_ToTable_cambio] FOREIGN KEY ([CambioID]) REFERENCES [cambio]([IdCambio]), 
+    CONSTRAINT [FK_veiculo_ToTable_combustivel] FOREIGN KEY ([CombustivelID]) REFERENCES [combustivel]([IdCombustivel]), 
+    CONSTRAINT [FK_veiculo_ToTable_cor] FOREIGN KEY ([CorID]) REFERENCES [cor]([IdCor]), 
+    CONSTRAINT [FK_veiculo_ToTable_versao] FOREIGN KEY ([VersaoID]) REFERENCES [versao]([IdVersao]), 
+    CONSTRAINT [FK_veiculo_ToTable_usuario] FOREIGN KEY ([UsuarioID]) REFERENCES [Usuario]([IdUsuario]), 
+    CONSTRAINT [FK_veiculo_ToTable_categoria] FOREIGN KEY ([CategoriaID]) REFERENCES [categoria]([IdCategoria]),
+)
+
+insert into veiculo(AnoFabricacao,AnoModelo,BlindagemID,CambioID,CombustivelID,CorID,IdVeiculo,VersaoID,Placa,Portas,Quilometragem,PrecoNormal,Acessos,Destaque,DataCadastro,Descricao,AceitaPermuta,VeiculoComDivida,CondicaoPagamento,Ranking,PrecoPromocional,UsuarioID,QtdeEstoque,CategoriaID) values (1959,2012,2,2,2,2,2,1,'MTB-5669',5,null,15000.00,0,0,'2011-11-07 14:37:03','',0,0,'',0.00,14990.00,1,1,5);
+insert into veiculo(AnoFabricacao,AnoModelo,BlindagemID,CambioID,CombustivelID,CorID,IdVeiculo,VersaoID,Placa,Portas,Quilometragem,PrecoNormal,Acessos,Destaque,DataCadastro,Descricao,AceitaPermuta,VeiculoComDivida,CondicaoPagamento,Ranking,PrecoPromocional,UsuarioID,QtdeEstoque,CategoriaID) values (null,null,2,2,2,2,3,4,'MTB-5110',null,50000,321.31,0,0,'2011-11-07 15:28:32','',0,0,'',0.00,120.00,1,1,5);
+
+
+CREATE TABLE opcionaisveiculo
+(
+	[OpcionalID] INT NOT NULL,
+	[VeiculoID] INT NOT NULL,
+	PRIMARY KEY (OpcionalID, VeiculoID), 
+    CONSTRAINT [FK_opcionaisveiculo_ToTable_Veiculo] FOREIGN KEY ([VeiculoID]) REFERENCES [veiculo]([IdVeiculo]), 
+    CONSTRAINT [FK_opcionaisveiculo_ToTable_Opcional] FOREIGN KEY ([OpcionalID]) REFERENCES [opcional]([IdOpcional]),	
+)
+
