@@ -13,10 +13,10 @@ namespace Concessionaria
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ConcessionariaDBEntities : DbContext
+    public partial class ConcessionariaDBEntities2 : DbContext
     {
-        public ConcessionariaDBEntities()
-            : base("name=ConcessionariaDBEntities")
+        public ConcessionariaDBEntities2()
+            : base("name=ConcessionariaDBEntities2")
         {
         }
     
@@ -25,5 +25,16 @@ namespace Concessionaria
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<blindagem> blindagems { get; set; }
+        public virtual DbSet<cambio> cambios { get; set; }
+        public virtual DbSet<categoria> categorias { get; set; }
+        public virtual DbSet<combustivel> combustivels { get; set; }
+        public virtual DbSet<cor> cors { get; set; }
+        public virtual DbSet<marca> marcas { get; set; }
+        public virtual DbSet<modelo> modeloes { get; set; }
+        public virtual DbSet<opcional> opcionals { get; set; }
+        public virtual DbSet<usuario> usuarios { get; set; }
+        public virtual DbSet<veiculo> veiculoes { get; set; }
+        public virtual DbSet<versao> versaos { get; set; }
     }
 }

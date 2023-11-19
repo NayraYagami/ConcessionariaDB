@@ -1,0 +1,38 @@
+﻿body {
+}
+
+.titulo-veiculos {
+    width: 100%;
+    font-size: 40px;
+    color: #232322;
+}
+
+.product_box {
+    width: 100%;
+    background-color: #ffffff;
+    height: auto;
+    border: 1px solid #7d7d7c;
+    padding: 20px 0px 0px 0px;
+    margin-top: 30px;
+}
+
+.bursh_text {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+}
+
+.lorem_text {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    margin: 0px;
+}
+
+.seemore_bt {
+    width: 170px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
