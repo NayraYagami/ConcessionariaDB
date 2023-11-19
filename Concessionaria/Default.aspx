@@ -18,7 +18,7 @@
                     <use xlink:href="#bootstrap" />
                 </svg>
                 <span class="fs-4">
-                    <img src="img/logotipo_moderno_para_oficina_mecânica_e_concessionária__1_-removebg-preview.png" />
+                    <img src="img/logotipo_ofc.png" />
                 </span>
             </a>
 
