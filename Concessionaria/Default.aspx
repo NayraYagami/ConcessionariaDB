@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Concessionaria.Default" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -10,6 +9,10 @@
     <title>Concessionária</title>
 </head>
 <body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap');
+    </style>
+    <div id="msgTopoTela" style="text-align: center; background-color: #19467E; color: #f7f9fb; font-family: 'Inter', sans-serif;">CONTE COM QUEM MAIS AMA E ENTENDE DE CARROS</div>
     <!-- Header -->
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
@@ -34,6 +37,79 @@
     <!-- Header -->
 
     <!-- Body -->
+    <div class="container">
+        <div id="Carousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-bs-target="#Carousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#Carousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#Carousel" data-bs-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/gol.jpg" alt="Gol" style="width: 100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/hb20.jpg" alt="HB2O" style="width: 100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/hilux.jpg" alt="Hilux" style="width: 100%;">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#Carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#Carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="container">
+        <div id="navegarMarcas" style="text-align: center; background-color: #19467E; color: #f7f9fb; font-family: 'Inter', sans-serif;">CONTE COM QUEM MAIS AMA E ENTENDE DE CARROS</div>
+        <div class="exibeMarcas">
+            <p>colocar logo das marcas aqui!</p>
+        </div>
+        <div class="buscarCarro">
+            <h2>ENCONTRE SEU VEÍCULO</h2>
+            <form runat="server">
+                <div class="filtros">
+                    <div class="filtroSelect">
+                        <select>
+                            <option value="value">MARCA</option>
+                        </select>
+                        <select>
+                            <option value="value">MODELO</option>
+                        </select>
+                        <select>
+                            <option value="value">VERSÃO</option>
+                        </select>
+                    </div>
+                    <div class="filtroTexto">
+                        <input placeholder="Busque por marca ou modelo do carro" />
+                    </div>
+                </div>
+                <div class="checkBox">
+                    <asp:CheckBox ID="chkNovo" runat="server" Checked />
+                    Novo
+                    <asp:CheckBox ID="chkSeminovo" runat="server" Checked />
+                    Seminovo 
+                </div>
+                <div class="submit">
+                    <asp:Button ID="btnSubmit" runat="server" Text="Ver Veículos" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Filtros -->
+
     <!-- Body -->
 
     <!-- Footer -->
