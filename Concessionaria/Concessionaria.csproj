@@ -90,6 +90,9 @@
       <LastGenOutput>ConcessionariaModel.cs</LastGenOutput>
     </Content>
     <Content Include="Default.aspx" />
+    <Content Include="img\gol.jpg" />
+    <Content Include="img\hb20.jpg" />
+    <Content Include="img\hilux.jpg" />
     <Content Include="img\logotipo_ofc.png" />
     <Content Include="Utils\ScriptConcessionaria.txt" />
     <Content Include="Web.config" />
