@@ -4,7 +4,29 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fcd7ab95661a4cbba85d56142018764d" Name="Diagram1" />
+      <Diagram DiagramId="4059768043044079bfd74f45b92e9291" Name="Diagram1">
+        <EntityTypeShape EntityType="ConcessionariaDBModel.blindagem" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConcessionariaDBModel.cambio" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConcessionariaDBModel.categoria" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConcessionariaDBModel.combustivel" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConcessionariaDBModel.cor" Width="1.5" PointX="5.25" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConcessionariaDBModel.marca" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConcessionariaDBModel.modelo" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConcessionariaDBModel.opcional" Width="1.5" PointX="5.25" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConcessionariaDBModel.usuario" Width="1.5" PointX="5.25" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConcessionariaDBModel.veiculo" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConcessionariaDBModel.versao" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="ConcessionariaDBModel.FK_veiculo_ToTable_blindagem" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcessionariaDBModel.FK_veiculo_ToTable_cambio" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcessionariaDBModel.FK_veiculo_ToTable_categoria" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcessionariaDBModel.FK_veiculo_ToTable_combustivel" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcessionariaDBModel.FK_veiculo_ToTable_cor" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcessionariaDBModel.fK_modelo_marca" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcessionariaDBModel.fk_versao_modelo" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcessionariaDBModel.FK_veiculo_ToTable_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcessionariaDBModel.FK_veiculo_ToTable_versao" ManuallyRouted="false" />
+        <AssociationConnector Association="ConcessionariaDBModel.opcionaisveiculo" ManuallyRouted="false" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>
