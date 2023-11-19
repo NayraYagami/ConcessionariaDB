@@ -89,6 +89,9 @@
       <DependentUpon>ConcessionariaModel.edmx</DependentUpon>
       <LastGenOutput>ConcessionariaModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Default.aspx" />
+    <Content Include="img\logotipoConcessionaria-removebg-preview-removebg-preview.png" />
+    <Content Include="img\logotipo_moderno_para_oficina_mecânica_e_concessionária__1_-removebg-preview.png" />
     <Content Include="Utils\ScriptConcessionaria.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -107,6 +110,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ConcessionariaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
