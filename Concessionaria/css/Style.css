@@ -1,4 +1,8 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(242, 242, 242) !important;
 }
 
 .titulo-veiculos {
@@ -35,4 +39,87 @@
     width: 170px;
     margin: 0 auto;
     padding-top: 60px;
+}
+
+.justify-content-center {
+    width: 144%;
+}
+
+.container.header {
+    margin: 0;
+    padding: 0;
+}
+
+a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-body-emphasis.text-decoration-none {
+    margin-right: 50% !important;
+}
+
+/*NÃO TA FUNCUINANDO E TO BRAVA JA COM ESSE TREM*/
+/*NÃO VOU MEXER NESSE AGORA*/
+.mb-4 {
+    margin-bottom: 0px !important;
+}
+
+.py-3 {
+    padding-top: .5em !important;
+    padding-bottom: .5em !important;
+    margin: 0px !important;
+    border: none !important;
+    background-color: white;
+}
+
+.border-bottom {
+    border-bottom: none !important;
+}
+
+h2.marca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    margin: 2em 0 0 0;
+    font-size: x-large;
+    background: #19467E;
+    color: #f7f9fb;
+}
+
+.exibeMarcas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+    background-color: white;
+}
+
+img.imgMarcas {
+    margin: 0px 30px;
+}
+
+h2.filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    margin-top: 2em;
+    background: white;
+    color: #19467E;
+}
+
+.filtroSelect {
+    display: flex;
+}
+
+select {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0px 16px;
+    gap: 10px;
+    width: 264px;
+    height: 40px;
+    margin: 0 1em 0 0 !important;
+    font-weight: 500;
+    align-items: center;
+    color: #19467E;
+    border: 1px solid #19467E;
 }

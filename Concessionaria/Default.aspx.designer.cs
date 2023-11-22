@@ -15,11 +15,7 @@ namespace Concessionaria
     {
 
         /// <summary>
-
         /// Controle chkNovo.
-
-        /// Controle lvVeiculos.
-
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
@@ -44,6 +40,14 @@ namespace Concessionaria
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
+
+        /// <summary>
+        /// Controle lvVeiculos.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
         protected global::System.Web.UI.WebControls.ListView lvVeiculos;
     }
 }
