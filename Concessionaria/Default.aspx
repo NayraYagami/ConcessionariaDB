@@ -114,17 +114,19 @@
                             </select>
                         </div>
                         <div class="filtroTexto">
-                            <input placeholder="Busque por marca ou modelo do carro" />
+                            <input class="inputFiltro" placeholder="Busque por marca ou modelo do carro"/>
                         </div>
                     </div>
-                    <div class="checkBox">
-                        <asp:CheckBox ID="chkNovo" runat="server" Checked />
-                        Novo
-                        <asp:CheckBox ID="chkSeminovo" runat="server" Checked />
-                        Seminovo 
-                    </div>
-                    <div class="submit">
-                        <asp:Button ID="btnSubmit" runat="server" Text="Ver Veículos" />
+                    <div class="btnSubmit">
+                        <div class="checkBox">
+                            <asp:CheckBox ID="chkNovo" runat="server" Checked />
+                            Novo
+                            <asp:CheckBox ID="chkSeminovo" runat="server" Checked />
+                            Seminovo 
+                        </div>
+                        <div class="submit">
+                            <asp:Button ID="btnSubmit" runat="server" Text="Ver Veículos" />
+                        </div>
                     </div>
                 </form>
             </div>

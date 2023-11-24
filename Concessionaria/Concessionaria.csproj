@@ -91,6 +91,7 @@
     </Content>
     <Content Include="css\Style.css" />
     <Content Include="Default.aspx" />
+    <Content Include="img\download.svg" />
     <Content Include="img\gol.jpg" />
     <Content Include="img\hb20.jpg" />
     <Content Include="img\hilux.jpg" />

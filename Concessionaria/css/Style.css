@@ -93,6 +93,7 @@ h2.marca {
 
 img.imgMarcas {
     margin: 0px 30px;
+    cursor: pointer;
 }
 
 h2.filtro {
@@ -100,8 +101,7 @@ h2.filtro {
     justify-content: center;
     align-items: center;
     padding: 1em 0;
-    margin-top: 2em;
-    background: white;
+    margin-top: 2em;    
     color: #19467E;
 }
 
@@ -109,17 +109,52 @@ h2.filtro {
     display: flex;
 }
 
-select {
+select:nth-child(n+1) {
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
     padding: 0px 16px;
     gap: 10px;
-    width: 264px;
-    height: 40px;
-    margin: 0 1em 0 0 !important;
+    width: 23.5%;
+    height: 2.5em;
+    margin: 0 1em 0 0;
     font-weight: 500;
     align-items: center;
     color: #19467E;
     border: 1px solid #19467E;
+    cursor: pointer;
+    outline: none;
+}
+
+select:nth-child(1) {
+    margin-left: 1.5em;
+}
+
+.buscarCarro {
+    background: white;
+}
+
+.filtroTexto {
+    margin: 1.5em 0 0 1.5em;
+}
+
+input.inputFiltro {
+    position: relative;
+    width: 75%;
+    height: 2.5em;
+    color: #19467E;
+    border: 1px solid #19467E;
+    outline: none;
+    cursor: pointer;
+}
+
+    input.inputFiltro::placeholder {
+        color: #19467E;
+    }
+
+.btnSubmit {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: end;
 }
