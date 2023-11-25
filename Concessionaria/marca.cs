@@ -18,6 +18,7 @@ namespace Concessionaria
         public marca()
         {
             this.modeloes = new HashSet<modelo>();
+            this.veiculoes = new HashSet<veiculo>();
         }
     
         public int IdMarca { get; set; }
@@ -25,5 +26,7 @@ namespace Concessionaria
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<modelo> modeloes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<veiculo> veiculoes { get; set; }
     }
 }
