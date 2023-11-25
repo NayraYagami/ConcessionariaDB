@@ -56,16 +56,16 @@
                 que está especificamente, seja essa (usar com banners) --%>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/gol.jpg" alt="Gol"/>
+                    <img src="img/Imagens_Carousel/gol.jpg" alt="Gol"/>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/hb20.jpg" alt="HB2O"/>
+                    <img src="img/Imagens_Carousel/hb20.jpg" alt="HB2O"/>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/hilux.jpg" alt="Hilux"/>
+                    <img src="img/Imagens_Carousel/hilux.jpg" alt="Hilux"/>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/teste.jpg" alt="teste"/>
+                    <img src="img/Imagens_Carousel/teste.jpg" alt="teste"/>
                 </div>
             </div>
             <!-- Left and right controls -->
