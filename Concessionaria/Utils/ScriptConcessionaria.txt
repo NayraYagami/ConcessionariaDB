@@ -108,6 +108,7 @@ CREATE TABLE veiculo
 	[UsuarioID] INT NOT NULL,
 	[QtdeEstoque] INT NOT NULL,
 	[CategoriaID] INT NOT NULL, 
+	[MarcaID] INT NOT NULL,
     CONSTRAINT [FK_veiculo_ToTable_blindagem] FOREIGN KEY ([BlindagemID]) REFERENCES [blindagem]([IdBlindagem]), 
     CONSTRAINT [FK_veiculo_ToTable_cambio] FOREIGN KEY ([CambioID]) REFERENCES [cambio]([IdCambio]), 
     CONSTRAINT [FK_veiculo_ToTable_combustivel] FOREIGN KEY ([CombustivelID]) REFERENCES [combustivel]([IdCombustivel]), 
@@ -115,10 +116,11 @@ CREATE TABLE veiculo
     CONSTRAINT [FK_veiculo_ToTable_versao] FOREIGN KEY ([VersaoID]) REFERENCES [versao]([IdVersao]), 
     CONSTRAINT [FK_veiculo_ToTable_usuario] FOREIGN KEY ([UsuarioID]) REFERENCES [Usuario]([IdUsuario]), 
     CONSTRAINT [FK_veiculo_ToTable_categoria] FOREIGN KEY ([CategoriaID]) REFERENCES [categoria]([IdCategoria]),
+	CONSTRAINT [FK_veiculo_ToTable_marca] FOREIGN KEY ([MarcaID]) REFERENCES [marca]([IdMarca])
 )
 
-insert into veiculo(AnoFabricacao,AnoModelo,BlindagemID,CambioID,CombustivelID,CorID,IdVeiculo,VersaoID,Placa,Portas,Quilometragem,PrecoNormal,Acessos,Destaque,DataCadastro,Descricao,AceitaPermuta,VeiculoComDivida,CondicaoPagamento,Ranking,PrecoPromocional,UsuarioID,QtdeEstoque,CategoriaID) values (1959,2012,2,2,2,2,2,1,'MTB-5669',5,null,15000.00,0,0,'2011-11-07 14:37:03','',0,0,'',0.00,14990.00,1,1,5);
-insert into veiculo(AnoFabricacao,AnoModelo,BlindagemID,CambioID,CombustivelID,CorID,IdVeiculo,VersaoID,Placa,Portas,Quilometragem,PrecoNormal,Acessos,Destaque,DataCadastro,Descricao,AceitaPermuta,VeiculoComDivida,CondicaoPagamento,Ranking,PrecoPromocional,UsuarioID,QtdeEstoque,CategoriaID) values (null,null,2,2,2,2,3,4,'MTB-5110',null,50000,321.31,0,0,'2011-11-07 15:28:32','',0,0,'',0.00,120.00,1,1,5);
+insert into veiculo(AnoFabricacao,AnoModelo,BlindagemID,CambioID,CombustivelID,CorID,IdVeiculo,VersaoID,Placa,Portas,Quilometragem,PrecoNormal,Acessos,Destaque,DataCadastro,Descricao,AceitaPermuta,VeiculoComDivida,CondicaoPagamento,Ranking,PrecoPromocional,UsuarioID,QtdeEstoque,CategoriaID, MarcaId) values (1959,2012,2,2,2,2,2,1,'MTB-5669',5,null,15000.00,0,0,'2011-11-07 14:37:03','',0,0,'',0.00,14990.00,1,1,5, 2);
+insert into veiculo(AnoFabricacao,AnoModelo,BlindagemID,CambioID,CombustivelID,CorID,IdVeiculo,VersaoID,Placa,Portas,Quilometragem,PrecoNormal,Acessos,Destaque,DataCadastro,Descricao,AceitaPermuta,VeiculoComDivida,CondicaoPagamento,Ranking,PrecoPromocional,UsuarioID,QtdeEstoque,CategoriaID, MarcaId) values (null,null,2,2,2,2,3,4,'MTB-5110',null,50000,321.31,0,0,'2011-11-07 15:28:32','',0,0,'',0.00,120.00,1,1,5, 3);
 
 
 CREATE TABLE opcionaisveiculo

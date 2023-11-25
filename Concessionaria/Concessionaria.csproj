@@ -91,6 +91,9 @@
     </Content>
     <Content Include="css\Style.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Detalhes.aspx" />
+    <Content Include="img\2.jpg" />
+    <Content Include="img\3.jpg" />
     <Content Include="img\download.svg" />
     <Content Include="img\gol.jpg" />
     <Content Include="img\hb20.jpg" />
@@ -148,6 +151,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detalhes.aspx.cs">
+      <DependentUpon>Detalhes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detalhes.aspx.designer.cs">
+      <DependentUpon>Detalhes.aspx</DependentUpon>
     </Compile>
     <Compile Include="marca.cs">
       <DependentUpon>ConcessionariaModel.tt</DependentUpon>

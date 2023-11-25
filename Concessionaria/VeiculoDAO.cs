@@ -9,7 +9,7 @@ namespace Concessionaria
         internal static List<veiculo> listarVeiculos()
         {
             List<veiculo> veiculos = null;
-            using (ConcessionariaDBEntities2 ctx = new ConcessionariaDBEntities2())
+            using (ConcessionariaDBEntities3 ctx = new ConcessionariaDBEntities3())
             {
                 //veiculos = ctx.veiculoes.ToList();
             }
