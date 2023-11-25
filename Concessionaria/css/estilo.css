@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap');
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: rgb(242, 242, 242) !important;
+}
+
+@media (min-width: 1400px) {
+    .container.header {
+        max-width: 70% !important;
+    }
 }
 
 .titulo-veiculos {
@@ -45,7 +51,7 @@ body {
     max-height: 10.5em; /* Substitua 200px pelo valor desejado */
     width: auto; /* Garante que a largura seja ajustada proporcionalmente à altura */
 }
-=======
+
 .justify-content-center {
     width: 144%;
 }
@@ -106,7 +112,7 @@ h2.filtro {
     justify-content: center;
     align-items: center;
     padding: 1em 0;
-    margin-top: 2em;    
+    margin-top: 2em;
     color: #19467E;
 }
 
@@ -136,7 +142,7 @@ select:nth-child(1) {
 }
 
 .buscarCarro {
-    background: white;
+    background-color: white;
 }
 
 .filtroTexto {
@@ -162,10 +168,4 @@ input.inputFiltro {
     justify-items: center;
     align-items: center;
     justify-content: end;
-}
-
-@media (min-width: 1400px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 70% !important;
-    }
 }

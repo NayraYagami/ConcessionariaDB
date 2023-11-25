@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="css/Style.css" rel="stylesheet" />
+    <link href="css/estilo.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Concessionária</title>
@@ -44,7 +44,7 @@
         <div id="Carousel" class="carousel slide" data-bs-ride="carousel">
             <!-- Conta quantas imagens tem no carousel para exibir a quantidade certa nos 'tracinhos' -->
             <ol class="carousel-indicators">
-                <% for (int i = 0; i < QtdImagensCarousel; i++)
+                <% for (int i = 0; i < GetQtdImagensCarousel(); i++)
                     { %>
                 <li data-bs-target="#Carousel" data-bs-slide-to="<%= i %>" <% if (i == 0)
                     { %>
@@ -56,16 +56,16 @@
                 que está especificamente, seja essa (usar com banners) --%>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/gol.jpg" alt="Gol" style="width: 100%;">
+                    <img src="img/gol.jpg" alt="Gol"/>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/hb20.jpg" alt="HB2O" style="width: 100%;">
+                    <img src="img/hb20.jpg" alt="HB2O"/>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/hilux.jpg" alt="Hilux" style="width: 100%;">
+                    <img src="img/hilux.jpg" alt="Hilux"/>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/teste.jpg" alt="teste" style="width: 100%;">
+                    <img src="img/teste.jpg" alt="teste"/>
                 </div>
             </div>
             <!-- Left and right controls -->

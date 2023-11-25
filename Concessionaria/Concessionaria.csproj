@@ -89,7 +89,7 @@
       <DependentUpon>ConcessionariaModel.edmx</DependentUpon>
       <LastGenOutput>ConcessionariaModel.cs</LastGenOutput>
     </Content>
-    <Content Include="css\Style.css" />
+    <Content Include="css\estilo.css" />
     <Content Include="Default.aspx" />
     <Content Include="Detalhes.aspx" />
     <Content Include="img\2.jpg" />

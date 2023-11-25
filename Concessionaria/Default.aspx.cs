@@ -7,7 +7,17 @@ namespace Concessionaria
     public partial class Default : System.Web.UI.Page
     {
         private string diretorioImagens = "~/img";
-        protected int QtdImagensCarousel { get; set; }
+        private int qtdImagensCarousel;
+
+        protected int GetQtdImagensCarousel()
+        {
+            return qtdImagensCarousel;
+        }
+
+        protected void SetQtdImagensCarousel(int value)
+        {
+            qtdImagensCarousel = value;
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -42,7 +52,7 @@ namespace Concessionaria
                 ou trocar a logica para contar as imagens). Uma possibilidade é deixar o formato jpg só para o 
                 carousel (não acho tão interessante, mas funcionaria) */
                 string[] imagens = Directory.GetFiles(Server.MapPath(diretorioImagens), "*.jpg");
-                QtdImagensCarousel = imagens.Length;
+                SetQtdImagensCarousel(imagens.Length);
             }
             catch (Exception ex)
             {
