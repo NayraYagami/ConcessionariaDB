@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Concessionaria.Default" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Concessionaria.Default" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -66,6 +66,16 @@
                 </div>
                 <div class="carousel-item">
                     <img src="img/teste.jpg" alt="teste" />
+                    <img src="img/Imagens_Carousel/gol.jpg" alt="Gol"/>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Imagens_Carousel/hb20.jpg" alt="HB2O"/>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Imagens_Carousel/hilux.jpg" alt="Hilux"/>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Imagens_Carousel/teste.jpg" alt="teste"/>
                 </div>
             </div>
             <!-- Left and right controls -->

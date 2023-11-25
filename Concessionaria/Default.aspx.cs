@@ -6,7 +6,7 @@ namespace Concessionaria
 {
     public partial class Default : System.Web.UI.Page
     {
-        private string diretorioImagens = "~/img";
+        private string diretorioImagens = "~/img/Imagens_Carousel/"; 
         private int qtdImagensCarousel;
 
         protected void Page_Load(object sender, EventArgs e)
