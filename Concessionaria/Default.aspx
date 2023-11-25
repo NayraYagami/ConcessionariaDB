@@ -5,7 +5,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="css/estilo.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Concessionária</title>
 </head>
@@ -56,16 +56,16 @@
                 que está especificamente, seja essa (usar com banners) --%>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/gol.jpg" alt="Gol"/>
+                    <img src="img/gol.jpg" alt="Gol" />
                 </div>
                 <div class="carousel-item">
-                    <img src="img/hb20.jpg" alt="HB2O"/>
+                    <img src="img/hb20.jpg" alt="HB2O" />
                 </div>
                 <div class="carousel-item">
-                    <img src="img/hilux.jpg" alt="Hilux"/>
+                    <img src="img/hilux.jpg" alt="Hilux" />
                 </div>
                 <div class="carousel-item">
-                    <img src="img/teste.jpg" alt="teste"/>
+                    <img src="img/teste.jpg" alt="teste" />
                 </div>
             </div>
             <!-- Left and right controls -->
@@ -86,46 +86,47 @@
         <div class="pesquisaMarca pesquisaFiltro">
             <h2 class="marca">NAVEGUE POR NOSSAS MARCAS</h2>
             <div class="exibeMarcas">
-                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_fiat.svg" alt="FIAT" style="width: 4%;">
-                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_honda.svg" alt="HONDA" style="width: 4%;">
-                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_ford.svg" alt="FORD" style="width: 4%;">
-                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_nissan.svg" alt="NISSAN" style="width: 4%;">
-                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_renault.svg" alt="RENAULT" style="width: 4%;">
-                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_hyundai.svg" alt="HYUNDAI" style="width: 4%;">
-                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_ram.svg" alt="RAM" style="width: 4%;">
-                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_jeep.svg" alt="JEEP" style="width: 4%;">
-                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_peugeot.svg" alt="PEUGEOT" style="width: 4%;">
-                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_citroen.svg" alt="CITROEN" style="width: 4%;">
-                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_kia.svg" alt="KIA" style="width: 4%;">
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_fiat.svg" alt="FIAT" style="width: 4%;" />
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_honda.svg" alt="HONDA" style="width: 4%;" />
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_ford.svg" alt="FORD" style="width: 4%;" />
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_nissan.svg" alt="NISSAN" style="width: 4%;" />
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_renault.svg" alt="RENAULT" style="width: 4%;" />
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_hyundai.svg" alt="HYUNDAI" style="width: 4%;" />
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_ram.svg" alt="RAM" style="width: 4%;" />
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_jeep.svg" alt="JEEP" style="width: 4%;" />
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_peugeot.svg" alt="PEUGEOT" style="width: 4%;" />
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_citroen.svg" alt="CITROEN" style="width: 4%;" />
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_kia.svg" alt="KIA" style="width: 4%;" />
             </div>
             <div class="buscarCarro">
                 <h2 class="filtro">ENCONTRE SEU VEÍCULO</h2>
                 <form runat="server">
                     <div class="filtros">
                         <div class="filtroSelect">
-                            <select>
-                                <option value="value">MARCA</option>
-                            </select>
-                            <select>
-                                <option value="value">MODELO</option>
-                            </select>
-                            <select>
-                                <option value="value">VERSÃO</option>
-                            </select>
+
+                            <asp:DropDownList runat="server" ID="DDLMarca">
+                            </asp:DropDownList>
+
+                            <asp:DropDownList runat="server" ID="DDLModelo">
+                            </asp:DropDownList>
+
+                            <asp:DropDownList runat="server" ID="DDLVersao">
+                            </asp:DropDownList>
+
                         </div>
                         <div class="filtroTexto">
-                            <input class="inputFiltro" placeholder="Busque por marca ou modelo do carro"/>
+                             <asp:TextBox runat="server" class="inputFiltro" ID="inputTextFiltro"  placeholder="Busque por marca ou modelo do carro"/>
                         </div>
                     </div>
                     <div class="btnSubmit">
                         <div class="checkBox">
-                            <asp:CheckBox ID="chkNovo" runat="server" Checked />
+                            <asp:CheckBox ID="chkNovo" runat="server" Checked="true" />
                             Novo
-                            <asp:CheckBox ID="chkSeminovo" runat="server" Checked />
+                            <asp:CheckBox ID="chkSeminovo" runat="server" Checked="true" />
                             Seminovo 
                         </div>
                         <div class="submit">
-                            <asp:Button ID="btnSubmit" runat="server" Text="Ver Veículos" />
+                            <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Ver Veículos" />
                         </div>
                     </div>
                 </form>
@@ -148,7 +149,7 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="card">
                                 <a class="img-veiculo" href='<%# "Detalhes.aspx?id=" + Eval("IdVeiculo") %>'>
-                                    <img src='<%# "img/" + Eval("IdVeiculo") + ".jpg"%>' class="img-veiculo card-img-top" alt="Imagem do veículo <%# Eval ("Descricao") %>">
+                                    <img src='<%# "img/Imagens_Carros_Lv/" + Eval("IdVeiculo") + ".jpg"%>' class="img-veiculo card-img-top" alt="Imagem do veículo <%# Eval ("Descricao") %>">
                                 </a>
                                 <a href="#" class="btn btn-primary">Ver Parcelas</a>
                                 <div class="card-body">

@@ -92,8 +92,8 @@
     <Content Include="css\estilo.css" />
     <Content Include="Default.aspx" />
     <Content Include="Detalhes.aspx" />
-    <Content Include="img\2.jpg" />
-    <Content Include="img\3.jpg" />
+    <Content Include="img\Imagens_Carros_Lv\2.jpg" />
+    <Content Include="img\Imagens_Carros_Lv\3.jpg" />
     <Content Include="img\download.svg" />
     <Content Include="img\gol.jpg" />
     <Content Include="img\hb20.jpg" />
@@ -162,9 +162,11 @@
     <Compile Include="marca.cs">
       <DependentUpon>ConcessionariaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MarcaDAO.cs" />
     <Compile Include="modelo.cs">
       <DependentUpon>ConcessionariaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModeloDAO.cs" />
     <Compile Include="opcional.cs">
       <DependentUpon>ConcessionariaModel.tt</DependentUpon>
     </Compile>
@@ -179,6 +181,7 @@
     <Compile Include="versao.cs">
       <DependentUpon>ConcessionariaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="VersaoDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="ConcessionariaModel.edmx">
