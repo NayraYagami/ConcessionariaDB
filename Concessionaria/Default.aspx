@@ -15,14 +15,14 @@
     </style>
     <div id="msgTopoTela" style="text-align: center; background-color: #19467E; color: #f7f9fb; font-family: 'Inter', sans-serif;">CONTE COM QUEM MAIS AMA E ENTENDE DE CARROS</div>
     <!-- Header -->
-    <div class="container">
+    <div class="container header">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                 <svg class="bi me-2" width="40" height="32">
                     <use xlink:href="#bootstrap" />
                 </svg>
                 <span class="fs-4">
-                    <img src="img/logotipo_ofc.png" />
+                    <img id="logoTopoPagina" src="img/logotipo_ofc.png" />
                 </span>
             </a>
 
@@ -38,16 +38,22 @@
     <!-- Header -->
 
     <!-- Body -->
+
+    <!-- Carousel -->
     <div class="container">
         <div id="Carousel" class="carousel slide" data-bs-ride="carousel">
-            <!-- Indicators -->
+            <!-- Conta quantas imagens tem no carousel para exibir a quantidade certa nos 'tracinhos' -->
             <ol class="carousel-indicators">
-                <li data-bs-target="#Carousel" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#Carousel" data-bs-slide-to="1"></li>
-                <li data-bs-target="#Carousel" data-bs-slide-to="2"></li>
+                <% for (int i = 0; i < QtdImagensCarousel; i++)
+                    { %>
+                <li data-bs-target="#Carousel" data-bs-slide-to="<%= i %>" <% if (i == 0)
+                    { %>
+                    class="active" <% } %>></li>
+                <% } %>
             </ol>
-
-            <!-- Wrapper for slides -->
+            <%-- Para ficar com o tamanho certo basta colocar a imagem com o tamanho certo, esta formatado para ficar com o tamanho da imagem
+                a ultima imagem é um teste que coloquei para ver como ficaria com um banner, creio que a ideia do carousel, no lugar e do jeito
+                que está especificamente, seja essa (usar com banners) --%>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="img/gol.jpg" alt="Gol" style="width: 100%;">
@@ -58,8 +64,10 @@
                 <div class="carousel-item">
                     <img src="img/hilux.jpg" alt="Hilux" style="width: 100%;">
                 </div>
+                <div class="carousel-item">
+                    <img src="img/teste.jpg" alt="teste" style="width: 100%;">
+                </div>
             </div>
-
             <!-- Left and right controls -->
             <button class="carousel-control-prev" type="button" data-bs-target="#Carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -71,47 +79,61 @@
             </button>
         </div>
     </div>
+    <!-- Carousel -->
 
     <!-- Filtros -->
     <div class="container">
-        <div id="navegarMarcas" style="text-align: center; background-color: #19467E; color: #f7f9fb; font-family: 'Inter', sans-serif;">CONTE COM QUEM MAIS AMA E ENTENDE DE CARROS</div>
-        <div class="exibeMarcas">
-            <p>colocar logo das marcas aqui!</p>
-        </div>
-        <div class="buscarCarro">
-            <h2>ENCONTRE SEU VEÍCULO</h2>
-            <form runat="server">
-                <div class="filtros">
-                    <div class="filtroSelect">
-                        <select>
-                            <option value="value">MARCA</option>
-                        </select>
-                        <select>
-                            <option value="value">MODELO</option>
-                        </select>
-                        <select>
-                            <option value="value">VERSÃO</option>
-                        </select>
+        <div class="pesquisaMarca pesquisaFiltro">
+            <h2 class="marca">NAVEGUE POR NOSSAS MARCAS</h2>
+            <div class="exibeMarcas">
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_fiat.svg" alt="FIAT" style="width: 4%;">
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_honda.svg" alt="HONDA" style="width: 4%;">
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_ford.svg" alt="FORD" style="width: 4%;">
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_nissan.svg" alt="NISSAN" style="width: 4%;">
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_renault.svg" alt="RENAULT" style="width: 4%;">
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_hyundai.svg" alt="HYUNDAI" style="width: 4%;">
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_ram.svg" alt="RAM" style="width: 4%;">
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_jeep.svg" alt="JEEP" style="width: 4%;">
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_peugeot.svg" alt="PEUGEOT" style="width: 4%;">
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_citroen.svg" alt="CITROEN" style="width: 4%;">
+                <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_kia.svg" alt="KIA" style="width: 4%;">
+            </div>
+            <div class="buscarCarro">
+                <h2 class="filtro">ENCONTRE SEU VEÍCULO</h2>
+                <form runat="server">
+                    <div class="filtros">
+                        <div class="filtroSelect">
+                            <select>
+                                <option value="value">MARCA</option>
+                            </select>
+                            <select>
+                                <option value="value">MODELO</option>
+                            </select>
+                            <select>
+                                <option value="value">VERSÃO</option>
+                            </select>
+                        </div>
+                        <div class="filtroTexto">
+                            <input class="inputFiltro" placeholder="Busque por marca ou modelo do carro"/>
+                        </div>
                     </div>
-                    <div class="filtroTexto">
-                        <input placeholder="Busque por marca ou modelo do carro" />
+                    <div class="btnSubmit">
+                        <div class="checkBox">
+                            <asp:CheckBox ID="chkNovo" runat="server" Checked />
+                            Novo
+                            <asp:CheckBox ID="chkSeminovo" runat="server" Checked />
+                            Seminovo 
+                        </div>
+                        <div class="submit">
+                            <asp:Button ID="btnSubmit" runat="server" Text="Ver Veículos" />
+                        </div>
                     </div>
-                </div>
-                <div class="checkBox">
-                    <asp:CheckBox ID="chkNovo" runat="server" Checked />
-                    Novo
-                    <asp:CheckBox ID="chkSeminovo" runat="server" Checked />
-                    Seminovo 
-                </div>
-                <div class="submit">
-                    <asp:Button ID="btnSubmit" runat="server" Text="Ver Veículos" />
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
     <!-- Filtros -->
 
-    <!-- Body -->
     <!-- produtos -->
     <div>
         <div class="container">
@@ -138,12 +160,13 @@
                     </ItemTemplate>
                 </asp:ListView>
             </div>
-            <!-- Fechar aqui -->
             <div class="seemore_bt"><a href="#">See More</a></div>
         </div>
     </div>
+    <!-- Produtos -->
 
-    <!-- product section end -->
+    <!-- Body -->
+
     <!-- Footer -->
     <div class="container">
         <footer class="py-5">

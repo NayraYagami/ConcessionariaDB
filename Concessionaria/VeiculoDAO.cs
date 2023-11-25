@@ -11,7 +11,7 @@ namespace Concessionaria
             List<veiculo> veiculos = null;
             using (ConcessionariaDBEntities2 ctx = new ConcessionariaDBEntities2())
             {
-                veiculos = ctx.veiculoes.ToList();
+                //veiculos = ctx.veiculoes.ToList();
             }
 
             return veiculos;

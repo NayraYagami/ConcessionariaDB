@@ -91,10 +91,23 @@
     </Content>
     <Content Include="css\Style.css" />
     <Content Include="Default.aspx" />
+    <Content Include="img\download.svg" />
     <Content Include="img\gol.jpg" />
     <Content Include="img\hb20.jpg" />
     <Content Include="img\hilux.jpg" />
     <Content Include="img\logotipo_ofc.png" />
+    <Content Include="img\Logo_MarcaCarro\logo_citroen.svg" />
+    <Content Include="img\Logo_MarcaCarro\logo_fiat.svg" />
+    <Content Include="img\Logo_MarcaCarro\logo_ford.svg" />
+    <Content Include="img\Logo_MarcaCarro\logo_honda.svg" />
+    <Content Include="img\Logo_MarcaCarro\logo_hyundai.svg" />
+    <Content Include="img\Logo_MarcaCarro\logo_jeep.svg" />
+    <Content Include="img\Logo_MarcaCarro\logo_kia.svg" />
+    <Content Include="img\Logo_MarcaCarro\logo_nissan.svg" />
+    <Content Include="img\Logo_MarcaCarro\logo_peugeot.svg" />
+    <Content Include="img\Logo_MarcaCarro\logo_ram.svg" />
+    <Content Include="img\Logo_MarcaCarro\logo_renault.svg" />
+    <Content Include="img\teste.jpg" />
     <Content Include="Utils\ScriptConcessionaria.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
