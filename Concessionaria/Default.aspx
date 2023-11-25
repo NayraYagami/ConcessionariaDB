@@ -147,7 +147,9 @@
                     <ItemTemplate>
                         <div class="col-lg-3 col-sm-6">
                             <div class="card">
-                                <img src="img/gol.jpg" class="card-img-top" alt="...">
+                                <a class="img-veiculo" href='<%# "Detalhes.aspx?id=" + Eval("IdVeiculo") %>'>
+                                    <img src='<%# "img/" + Eval("IdVeiculo") + ".jpg"%>' class="img-veiculo card-img-top" alt="Imagem do veículo <%# Eval ("Descricao") %>">
+                                </a>
                                 <a href="#" class="btn btn-primary">Ver Parcelas</a>
                                 <div class="card-body">
                                     <h5 class="card-title"><%# Eval ("Descricao") %></h5>

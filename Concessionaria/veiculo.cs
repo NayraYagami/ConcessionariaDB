@@ -44,12 +44,14 @@ namespace Concessionaria
         public int UsuarioID { get; set; }
         public int QtdeEstoque { get; set; }
         public int CategoriaID { get; set; }
+        public int MarcaID { get; set; }
     
         public virtual blindagem blindagem { get; set; }
         public virtual cambio cambio { get; set; }
         public virtual categoria categoria { get; set; }
         public virtual combustivel combustivel { get; set; }
         public virtual cor cor { get; set; }
+        public virtual marca marca { get; set; }
         public virtual usuario usuario { get; set; }
         public virtual versao versao { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

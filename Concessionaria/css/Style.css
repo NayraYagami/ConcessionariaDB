@@ -41,6 +41,11 @@ body {
     padding-top: 60px;
 }
 
+.img-veiculo {
+    max-height: 10.5em; /* Substitua 200px pelo valor desejado */
+    width: auto; /* Garante que a largura seja ajustada proporcionalmente à altura */
+}
+=======
 .justify-content-center {
     width: 144%;
 }

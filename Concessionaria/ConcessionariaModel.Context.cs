@@ -13,10 +13,10 @@ namespace Concessionaria
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ConcessionariaDBEntities2 : DbContext
+    public partial class ConcessionariaDBEntities3 : DbContext
     {
-        public ConcessionariaDBEntities2()
-            : base("name=ConcessionariaDBEntities2")
+        public ConcessionariaDBEntities3()
+            : base("name=ConcessionariaDBEntities3")
         {
         }
     
