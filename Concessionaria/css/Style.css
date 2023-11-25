@@ -158,3 +158,9 @@ input.inputFiltro {
     align-items: center;
     justify-content: end;
 }
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 70% !important;
+    }
+}
