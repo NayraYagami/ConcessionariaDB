@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap');
 
 body {
     font-family: 'Inter', sans-serif;
@@ -162,4 +162,10 @@ input.inputFiltro {
     justify-items: center;
     align-items: center;
     justify-content: end;
+}
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 70% !important;
+    }
 }
