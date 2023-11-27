@@ -119,9 +119,9 @@
                     </div>
                     <div class="btnSubmit">
                         <div class="checkBox">
-                            <asp:CheckBox ID="chkNovo" runat="server" Checked />
+                            <asp:CheckBox ID="chkNovo" runat="server" Checked="true" />
                             Novo
-                            <asp:CheckBox ID="chkSeminovo" runat="server" Checked />
+                            <asp:CheckBox ID="chkSeminovo" runat="server" Checked="true" />
                             Seminovo 
                         </div>
                         <div class="submit">
