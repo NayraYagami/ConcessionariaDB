@@ -27,11 +27,11 @@
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Veiculos</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" aria-current="page" style="color: #19467E;">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">Veiculos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">About</a></li>
             </ul>
         </header>
     </div>
@@ -154,7 +154,7 @@
                                 <a class="img-veiculo" href='<%# "Detalhes.aspx?id=" + Eval("IdVeiculo") %>'>
                                     <img src='<%# "img/Imagens_Carros_Lv/" + Eval("IdVeiculo") + ".jpg"%>' class="img-veiculo card-img-top" alt="Imagem do veículo <%# Eval ("Descricao") %>">
                                 </a>
-                                <a href="#" class="btn btn-primary">Ver Parcelas</a>
+                                <a href="#" class="btn btn-primary" style="background-color: #19467e; border-color: #19467e;">Ver Parcelas</a>
                                 <div class="card-body">
                                     <h5 class="card-title"><%# Eval ("Descricao") %></h5>
                                     <p class="card-text"><%# Eval ("Quilometragem") %> KM / <%# Eval ("AnoModelo") %> / <%# Eval ("AnoFabricacao") %> </p>

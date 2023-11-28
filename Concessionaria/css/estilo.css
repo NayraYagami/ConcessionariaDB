@@ -184,3 +184,14 @@ input.inputFiltro {
 .carousel-item.active {
     display: block;
 }
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #19467E;
+    border-color: #19467E;
+}
+
+/*a.nav-link:hover {
+   background-color: #19467E;
+}
+*/
