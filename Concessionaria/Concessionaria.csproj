@@ -92,12 +92,14 @@
     <Content Include="css\estilo.css" />
     <Content Include="Default.aspx" />
     <Content Include="Detalhes.aspx" />
+    <Content Include="img\Imagens_Carousel\BannerBlackNovember.png" />
+    <Content Include="img\Imagens_Carousel\BannerBlackWeek.png" />
+    <Content Include="img\Imagens_Carousel\bannerPropaganda.png" />
+    <Content Include="img\Imagens_Carousel\blackNovember.png" />
+    <Content Include="img\Imagens_Carousel\Contato.png" />
     <Content Include="img\Imagens_Carros_Lv\2.jpg" />
     <Content Include="img\Imagens_Carros_Lv\3.jpg" />
     <Content Include="img\download.svg" />
-    <Content Include="img\Imagens_Carousel\gol.jpg" />
-    <Content Include="img\Imagens_Carousel\hb20.jpg" />
-    <Content Include="img\Imagens_Carousel\hilux.jpg" />
     <Content Include="img\logotipo_ofc.png" />
     <Content Include="img\Logo_MarcaCarro\logo_citroen.svg" />
     <Content Include="img\Logo_MarcaCarro\logo_fiat.svg" />
@@ -110,7 +112,6 @@
     <Content Include="img\Logo_MarcaCarro\logo_peugeot.svg" />
     <Content Include="img\Logo_MarcaCarro\logo_ram.svg" />
     <Content Include="img\Logo_MarcaCarro\logo_renault.svg" />
-    <Content Include="img\Imagens_Carousel\teste.jpg" />
     <Content Include="Utils\ScriptConcessionaria.txt" />
     <Content Include="Web.config" />
   </ItemGroup>

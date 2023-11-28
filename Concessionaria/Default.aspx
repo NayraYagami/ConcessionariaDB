@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Concessionaria.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Concessionaria.Default" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -56,26 +56,19 @@
                 que está especificamente, seja essa (usar com banners) --%>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/gol.jpg" alt="Gol" />
+                    <img src="img/Imagens_Carousel/BannerBlackWeek.png" alt="Banner Black Week" />
                 </div>
                 <div class="carousel-item">
-                    <img src="img/hb20.jpg" alt="HB2O" />
+                    <img src="img/Imagens_Carousel/bannerPropaganda.png" alt="Banner de Propaganda" />
                 </div>
                 <div class="carousel-item">
-                    <img src="img/hilux.jpg" alt="Hilux" />
+                    <img src="img/Imagens_Carousel/BannerBlackNovember.png" alt="Banner Black November" />
                 </div>
                 <div class="carousel-item">
-                    <img src="img/teste.jpg" alt="teste" />
-                    <img src="img/Imagens_Carousel/gol.jpg" alt="Gol"/>
+                    <img src="img/Imagens_Carousel/blackNovember.png" alt="Banner Black November" />
                 </div>
                 <div class="carousel-item">
-                    <img src="img/Imagens_Carousel/hb20.jpg" alt="HB2O"/>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/Imagens_Carousel/hilux.jpg" alt="Hilux"/>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/Imagens_Carousel/teste.jpg" alt="teste"/>
+                    <img src="img/Imagens_Carousel/Contato.png" />
                 </div>
             </div>
             <!-- Left and right controls -->
@@ -125,7 +118,7 @@
 
                         </div>
                         <div class="filtroTexto">
-                             <asp:TextBox runat="server" class="inputFiltro" ID="inputTextFiltro"  placeholder="Busque por marca ou modelo do carro"/>
+                            <asp:TextBox runat="server" class="inputFiltro" ID="inputTextFiltro" placeholder="Busque por marca ou modelo do carro" />
                         </div>
                     </div>
                     <div class="btnSubmit">
