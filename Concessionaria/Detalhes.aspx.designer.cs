@@ -195,12 +195,12 @@ namespace Concessionaria
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl TelContatoVendedor;
 
         /// <summary>
-        /// Controle ListView1.
+        /// Controle lvVeiculos.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView1;
+        protected global::System.Web.UI.WebControls.ListView lvVeiculos;
     }
 }

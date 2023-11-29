@@ -11,7 +11,20 @@ namespace Concessionaria
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            List<veiculo> veiculos = VeiculoDAO.ListarVeiculos();
+            AtualizarLvVeiculos(veiculos);
+        }
+        private void AtualizarLvVeiculos(List<veiculo> veiculos)
+        {
+            try
+            {
+                lvVeiculos.DataSource = veiculos;
+                lvVeiculos.DataBind();
+            }
+            catch (Exception ex)
+            {
 
+            }
         }
     }
 }
