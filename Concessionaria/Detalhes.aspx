@@ -38,62 +38,6 @@
     <!-- Header -->
 
     <!-- Body -->
-    <!-- Carousel -->
-    <div class="container">
-        <div id="Carousel" class="carousel slide" data-bs-ride="carousel">
-            <ol class="carousel-indicators">
-                <% for (int i = 0; i < GetQtdImagensCarousel(); i++)
-                    { %>
-                <li data-bs-target="#Carousel" data-bs-slide-to="<%= i %>" <% if (i == 0)
-                    { %>
-                    class="active" <% } %>></li>
-                <% } %>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/Imagens_Carousel/gol.jpg" alt="Gol" />
-                </div>
-                <div class="carousel-item">
-                    <img src="img/Imagens_Carousel/hb20.jpg" alt="HB2O" />
-                </div>
-                <div class="carousel-item">
-                    <img src="img/Imagens_Carousel/hilux.jpg" alt="Hilux" />
-                </div>
-                <div class="carousel-item">
-                    <img src="img/Imagens_Carousel/teste.jpg" alt="teste" />
-                </div>
-            </div>
-            <!-- Left and right controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#Carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#Carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-
-    <asp:ListView runat="server" ID="lvVeiculos">
-        <ItemTemplate>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card">
-                    <a class="img-veiculo" href='<%# "Detalhes.aspx?id=" + Eval("IdVeiculo") %>'>
-                        <img src='<%# "img/" + Eval("IdVeiculo") + ".jpg"%>' class="img-veiculo card-img-top" alt="Imagem do veículo <%# Eval ("Descricao") %>">
-                    </a>
-                    <a href="#" class="btn btn-primary">Ver Parcelas</a>
-                    <div class="card-body">
-                        <h5 class="card-title"><%# Eval ("Descricao") %></h5>
-                        <p class="card-text"><%# Eval ("Quilometragem") %> KM / <%# Eval ("AnoModelo") %> / <%# Eval ("AnoFabricacao") %> </p>
-                        <h3>R$ <%# Eval ("PrecoNormal") %></h3>
-
-                    </div>
-                </div>
-            </div>
-        </ItemTemplate>
-    </asp:ListView>
-    <!-- Carousel -->
     <%--Tela de Detalhes do Carro--%>
     <form method="post" runat="server">
         <div class="container">
