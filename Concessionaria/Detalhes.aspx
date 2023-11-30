@@ -44,8 +44,21 @@
             <div class="col-12">
                 <section>
                     <div class="DetalhesCarro">
-                        <%-- Detalhes do Carro --%>
-
+                        <%-- Detalhes do Carro AnoFabricacao, CorID, CombustivelID, Quilometragem, CambioID e Placa--%> 
+                        <p>Ano de Fabricação </p>
+                        <h5 id="AnoFabricacaoCarroAnuncio" runat="server"/>
+                        <p>Cor </p>
+                        <h5 id="CorCarroAnuncio" runat="server"/>
+                        <p>Combustível </p>
+                        <h5 id="CombustivelCarroAnuncio" runat="server"/>
+                        <p>Quilometragem </p>
+                        <h5 id="QuilometragemCarroAnuncio" runat="server"/>
+                        <p>Câmbio </p>
+                        <h5 id="CambioCarroAnuncio" runat="server"/>
+                        <p>Final da Placa </p>
+                        <h5 id="PlacaCarroAnuncio" runat="server"/>
+                        <h5>Descrição </h5>
+                        <p id="DescricaoCarroAnuncio" runat="server"/>
                         <%-- Detalhes do Carro --%>
                     </div>
                     <div class="SimulaParcelas">
@@ -81,7 +94,7 @@
                 <section>
                     <div class="ContatoVendedor">
                         <%--Contato com Vendedor--%>
-                        <h3>R$ <%# Eval ("PrecoNormal") %></h3>
+                        <h3 id="precoVeiculoAnuncio" runat="server"></h3>
                         <asp:Button ID="btnVerParcelas" runat="server" Text="Ver Parcelas" />
                         <small>Entre em contato com um vendedor</small>
                         <asp:Label ID="lblNomeContatoVendedor" runat="server">
@@ -128,7 +141,6 @@
                                     <h5 class="card-title"><%# Eval ("Descricao") %></h5>
                                     <p class="card-text"><%# Eval ("Quilometragem") %> KM / <%# Eval ("AnoModelo") %> / <%# Eval ("AnoFabricacao") %> </p>
                                     <h3>R$ <%# Eval ("PrecoNormal") %></h3>
-
                                 </div>
                             </div>
                         </div>
@@ -162,7 +174,7 @@
                         <p>Monthly digest of what's new and exciting from us.</p>
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                             <label for="newsletter1" class="visually-hidden">Email address</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address"/>
                             <button class="btn btn-primary" type="button">Subscribe</button>
                         </div>
                     </form>

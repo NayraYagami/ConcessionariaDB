@@ -13,7 +13,30 @@ namespace Concessionaria
         {
             List<veiculo> veiculos = VeiculoDAO.ListarVeiculos();
             AtualizarLvVeiculos(veiculos);
+            int queryString_ID = Convert.ToInt32(Request.QueryString["id"]);
+            var veiculo = new veiculo();
+            veiculo = VeiculoDAO.GetById(queryString_ID);
+            popularAnuncio(veiculo);
+
         }
+
+        private void popularAnuncio(veiculo veiculo)
+        {
+            
+            if (veiculo != null)
+            {
+                precoVeiculoAnuncio.InnerText = "R$ " + veiculo.PrecoNormal.ToString();
+                AnoFabricacaoCarroAnuncio.InnerText = veiculo.AnoFabricacao.ToString();
+                CorCarroAnuncio.InnerText = CorDAO.buscarCor(veiculo.CorID).Nome;
+                CombustivelCarroAnuncio.InnerText = CombustivelDAO.buscarCombustivel(veiculo.CombustivelID).Descricao;
+                QuilometragemCarroAnuncio.InnerText = veiculo.Quilometragem.ToString() + " KM";
+                CambioCarroAnuncio.InnerText = CambioDAO.buscarCambio(veiculo.CambioID).Descricao;
+                var finalPlaca = veiculo.Placa[veiculo.Placa.Length - 1];
+                PlacaCarroAnuncio.InnerText = finalPlaca.ToString();
+                DescricaoCarroAnuncio.InnerText = veiculo.Descricao.ToString();
+            }
+        }
+
         private void AtualizarLvVeiculos(List<veiculo> veiculos)
         {
             try
