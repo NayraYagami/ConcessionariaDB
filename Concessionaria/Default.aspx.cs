@@ -20,7 +20,8 @@ namespace Concessionaria
                 List<marca> marcas = MarcaDAO.ListarMarcas();
                 List<modelo> modelos = ModeloDAO.ListarModelos();
                 List<versao> versoes = VersaoDAO.ListarVersoes();
-                AtualizarLvVeiculos(veiculos);
+                List<veiculo> veiculos16 = VeiculoDAO.ListarVeiculosLimit16();
+                AtualizarLvVeiculos(veiculos16);
                 PreencherDDLMarca(marcas);
                 PreencherDDLModelo(modelos);
                 PreencherDDLVersao(versoes);
@@ -116,8 +117,6 @@ namespace Concessionaria
                 var h5NomeCarroCard = (HtmlGenericControl)e.Item.FindControl("nomeCarroCard");
 
                 var veiculo = (veiculo)e.Item.DataItem;
-
-                string modelo = veiculo.Quilometragem.ToString();
 
                 string nomeCarro = preencherNomeCarroCard(veiculo.VersaoID);
 

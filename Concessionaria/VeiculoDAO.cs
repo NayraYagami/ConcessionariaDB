@@ -17,6 +17,18 @@ namespace Concessionaria
             return veiculos;
         }
 
+        internal static List<veiculo> ListarVeiculosLimit16()
+        {
+            List<veiculo> veiculos = null;
+            using (ConcessionariaDBEntities3 ctx = new ConcessionariaDBEntities3())
+            {
+                veiculos = ctx.veiculoes.Take(16).ToList();
+            }
+
+            return veiculos;
+        }
+
+
         internal static List<veiculo> Search(int idMarca, int idModelo, int idVersao, bool novo, bool semiNovo, string inputFiltro)
         {
             List<veiculo> veiculos = ListarVeiculos();

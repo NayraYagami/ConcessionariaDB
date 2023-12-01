@@ -166,7 +166,6 @@
                     </ItemTemplate>
                 </asp:ListView>
             </div>
-            <div class="seemore_bt"><a href="#">See More</a></div>
         </div>
     </div>
     <!-- Produtos -->
