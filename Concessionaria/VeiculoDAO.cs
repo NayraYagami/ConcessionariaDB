@@ -64,5 +64,11 @@ namespace Concessionaria
             return veiculos;
 
         }
+
+        internal static veiculo GetById(int queryString_ID)
+        {
+            List<veiculo> veiculos = ListarVeiculos();
+            return veiculos.FirstOrDefault(v => v.IdVeiculo == queryString_ID);
+        }
     }
 }

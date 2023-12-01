@@ -1,4 +1,4 @@
-﻿//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // <gerado automaticamente>
 //     Este código foi gerado por uma ferramenta.
 //
@@ -13,6 +13,78 @@ namespace Concessionaria
 
     public partial class Detalhes
     {
+
+        /// <summary>
+        /// Controle imgCarroAnuncio.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgCarroAnuncio;
+
+        /// <summary>
+        /// Controle AnoFabricacaoCarroAnuncio.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AnoFabricacaoCarroAnuncio;
+
+        /// <summary>
+        /// Controle CorCarroAnuncio.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CorCarroAnuncio;
+
+        /// <summary>
+        /// Controle CombustivelCarroAnuncio.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CombustivelCarroAnuncio;
+
+        /// <summary>
+        /// Controle QuilometragemCarroAnuncio.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl QuilometragemCarroAnuncio;
+
+        /// <summary>
+        /// Controle CambioCarroAnuncio.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CambioCarroAnuncio;
+
+        /// <summary>
+        /// Controle PlacaCarroAnuncio.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PlacaCarroAnuncio;
+
+        /// <summary>
+        /// Controle DescricaoCarroAnuncio.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DescricaoCarroAnuncio;
 
         /// <summary>
         /// Controle lblNome.
@@ -114,6 +186,15 @@ namespace Concessionaria
         protected global::System.Web.UI.WebControls.Button btnSimularParcelas;
 
         /// <summary>
+        /// Controle precoVeiculoAnuncio.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl precoVeiculoAnuncio;
+
+        /// <summary>
         /// Controle btnVerParcelas.
         /// </summary>
         /// <remarks>
@@ -195,12 +276,14 @@ namespace Concessionaria
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl TelContatoVendedor;
 
         /// <summary>
+        /// Controle lvVeiculos.
         /// Controle ListView1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView lvVeiculos;
         protected global::System.Web.UI.WebControls.ListView ListView1;
     }
 }

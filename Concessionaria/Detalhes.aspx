@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Detalhes.aspx.cs" Inherits="Concessionaria.Detalhes" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Detalhes.aspx.cs" Inherits="Concessionaria.Detalhes" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -38,14 +38,28 @@
     <!-- Header -->
 
     <!-- Body -->
-    <%--Tela de Detalhes do Carro--%>
+    <%-- Tela de Detalhes do Carro --%>
     <form method="post" runat="server">
         <div class="container">
             <div class="col-12">
                 <section>
                     <div class="DetalhesCarro">
-                        <%-- Detalhes do Carro --%>
-
+                        <%-- Detalhes do Carro --%> 
+                        <asp:Image ID="imgCarroAnuncio" runat="server" AlternateText="Imagens do Carro ainda não foram incluídas no anúncio! Em breve atualizaremos o anúncio com as imagens." />
+                        <p>Ano de Fabricação </p>
+                        <h5 id="AnoFabricacaoCarroAnuncio" runat="server"/>
+                        <p>Cor </p>
+                        <h5 id="CorCarroAnuncio" runat="server"/>
+                        <p>Combustível </p>
+                        <h5 id="CombustivelCarroAnuncio" runat="server"/>
+                        <p>Quilometragem </p>
+                        <h5 id="QuilometragemCarroAnuncio" runat="server"/>
+                        <p>Câmbio </p>
+                        <h5 id="CambioCarroAnuncio" runat="server"/>
+                        <p>Final da Placa </p>
+                        <h5 id="PlacaCarroAnuncio" runat="server"/>
+                        <h5>Descrição </h5>
+                        <p id="DescricaoCarroAnuncio" runat="server"/>
                         <%-- Detalhes do Carro --%>
                     </div>
                     <div class="SimulaParcelas">
@@ -54,6 +68,28 @@
                         <strong>Simule as parcelas!</strong>
                         <p>Todos os campos são obrigatórios</p>
                         <asp:Label ID="lblNome" runat="server">
+                            <input id="Nome" type="text" placeholder="Nome*" runat="server" />
+                        </asp:Label>
+                        <asp:Label ID="lblEmail" runat="server">
+                            <input id="Email" type="email" placeholder="E-mail*" runat="server" />
+                        </asp:Label>
+                        <asp:Label ID="lblCpf" runat="server">
+                            <input id="Cpf" type="text" placeholder="CPF ou CNPJ*" runat="server" />
+                        </asp:Label>
+                        <asp:Label ID="lblTelefone" runat="server" type="tel">
+                            <input id="Telefone" type="tel" placeholder="Telefone*" runat="server" />
+                        </asp:Label>
+                        <%-- Simula Parcelas --%>
+
+                        <div class="checkboxConcorda">
+                            <asp:Label ID="lblConcorda" runat="server">
+                                <asp:CheckBox ID="ckbConcorda" runat="server" />
+                                <p>Concordo e estou ciente que esta é uma calculadora de simulação de financiamento e não corresponde ao valor real das parcelas mensais.</p>
+                            </asp:Label>
+                        </div>
+                        <div>
+                            <asp:Button ID="btnSimularParcelas" runat="server" Text="Simular Parcelas" />
+                        </div>
                             <input id="Nome" type="text" required="required" placeholder="Nome*" runat="server" />
                         </asp:Label>
                         <asp:Label ID="lblEmail" runat="server">
@@ -79,6 +115,21 @@
                 </section>
                 <section>
                     <div class="ContatoVendedor">
+                        <%-- Contato com Vendedor --%>
+                        <h3 id="precoVeiculoAnuncio" runat="server"></h3>
+                        <asp:Button ID="btnVerParcelas" runat="server" Text="Ver Parcelas" />
+                        <small>Entre em contato com um vendedor</small>
+                        <asp:Label ID="lblNomeContatoVendedor" runat="server">
+                            <input id="NomeContatoVendedor" type="text" placeholder="Nome*" runat="server" />
+                        </asp:Label>
+                        <asp:Label ID="lblEmailContatoVendedor" runat="server">
+                            <input id="EmailContatoVendedor" type="email" placeholder="E-mail*" runat="server" />
+                        </asp:Label>
+                        <asp:Label ID="lblCpfContatoVendedor" runat="server">
+                            <input id="CpfContatoVendedor" type="text" placeholder="CPF ou CNPJ*" runat="server" />
+                        </asp:Label>
+                        <asp:Label ID="lblTelefoneContatoVendedor" runat="server" type="tel">
+                            <input id="TelContatoVendedor" type="tel" placeholder="Telefone*" runat="server" />
                         <%--Contato com Vendedor--%>
                         <h3>R$ <%# Eval ("PrecoNormal") %></h3>
                         <asp:Button ID="btnVerParcelas" runat="server" Text="Ver Parcelas" />
@@ -98,13 +149,13 @@
                         <select>
                             <option value="value">Loja</option>
                         </select>
-                        <%--Contato com Vendedor--%>
+                        <%-- Contato com Vendedor --%>
                     </div>
                 </section>
             </div>
         </div>
     </form>
-    <%--Tela de Detalhes do Carro--%>
+    <%-- Tela de Detalhes do Carro --%>
 
     <!-- produtos -->
     <div>
@@ -115,19 +166,18 @@
                 </div>
             </div>
             <div class="row">
-                <asp:ListView runat="server" ID="ListView1">
+                <asp:ListView runat="server" ID="lvVeiculos">
                     <ItemTemplate>
                         <div class="col-lg-3 col-sm-6">
                             <div class="card">
                                 <a class="img-veiculo" href='<%# "Detalhes.aspx?id=" + Eval("IdVeiculo") %>'>
-                                    <img src='<%# "img/" + Eval("IdVeiculo") + ".jpg"%>' class="img-veiculo card-img-top" alt="Imagem do veículo <%# Eval ("Descricao") %>">
+                                    <img src='<%# "img/Imagens_Carros_Lv/" + Eval("IdVeiculo") + ".jpg"%>' class="img-veiculo card-img-top" alt="Imagem do veículo <%# Eval ("Descricao") %>">
                                 </a>
                                 <a href="#" class="btn btn-primary">Ver Parcelas</a>
                                 <div class="card-body">
                                     <h5 class="card-title"><%# Eval ("Descricao") %></h5>
                                     <p class="card-text"><%# Eval ("Quilometragem") %> KM / <%# Eval ("AnoModelo") %> / <%# Eval ("AnoFabricacao") %> </p>
                                     <h3>R$ <%# Eval ("PrecoNormal") %></h3>
-
                                 </div>
                             </div>
                         </div>
@@ -161,6 +211,7 @@
                         <p>Monthly digest of what's new and exciting from us.</p>
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                             <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address"/>
                             <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
                             <button class="btn btn-primary" type="button">Subscribe</button>
                         </div>
