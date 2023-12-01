@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
 
 namespace Concessionaria
 {
     public partial class Default : System.Web.UI.Page
     {
-        private string diretorioImagens = "~/img/Imagens_Carousel/"; 
+        private string diretorioImagens = "~/img/Imagens_Carousel/";
         private int qtdImagensCarousel;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -73,7 +76,7 @@ namespace Concessionaria
             }
             catch (Exception ex)
             {
-
+                // Lidar com exceções, se necessário
             }
         }
 
@@ -103,9 +106,36 @@ namespace Concessionaria
             var inputFiltro = inputTextFiltro.Text;
 
             List<veiculo> veiculos = VeiculoDAO.Search(idMarca, idModelo, idVersao, novo, semiNovo, inputFiltro);
-            
-             lvVeiculos.DataSource = veiculos;
-                lvVeiculos.DataBind();
+
+            lvVeiculos.DataSource = veiculos;
+            lvVeiculos.DataBind();
+        }
+
+        protected void lvVeiculos_ItemDataBound1(object sender, ListViewItemEventArgs e)
+        {
+
+            if (e.Item.ItemType == ListViewItemType.DataItem)
+            {
+                // Acessar o controle h5 dentro do ItemDataBound
+                var h5NomeCarroCard = (HtmlGenericControl)e.Item.FindControl("nomeCarroCard");
+
+                // Exemplo: Acessar as propriedades do objeto veiculo
+                var veiculo = (veiculo)e.Item.DataItem;
+
+                int marca = veiculo.MarcaID;
+                string modelo = veiculo.Quilometragem.ToString();
+
+                string nomeCarro = preencherNomeCarroCard(marca);
+
+                // Exemplo: Definir o conteúdo com base na marca e modelo
+                h5NomeCarroCard.InnerText = $"Marca: {marca}, Modelo: {modelo}";
+            }
+        }
+
+        private string preencherNomeCarroCard(int marca)
+        {
+            //marca marca1 = MarcaDAO.getMarcaById(marca);
+            return null;
         }
     }
 }

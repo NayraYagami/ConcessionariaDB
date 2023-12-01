@@ -147,7 +147,7 @@
                 </div>
             </div>
             <div class="row">
-                <asp:ListView runat="server" ID="lvVeiculos">
+                <asp:ListView runat="server" ID="lvVeiculos" OnItemDataBound="lvVeiculos_ItemDataBound1">
                     <ItemTemplate>
                         <div class="col-lg-3 col-sm-6">
                             <div class="card">
@@ -156,7 +156,7 @@
                                 </a>
                                 <a href="#" class="btn btn-primary" style="background-color: #19467e; border-color: #19467e;">Ver Parcelas</a>
                                 <div class="card-body">
-                                    <h5 class="card-title"><%# Eval ("Descricao") %></h5>
+                                    <h5 class="card-title" id="nomeCarroCard" runat="server" ></h5>
                                     <p class="card-text"><%# Eval ("Quilometragem") %> KM / <%# Eval ("AnoModelo") %> / <%# Eval ("AnoFabricacao") %> </p>
                                     <h3>R$ <%# Eval ("PrecoNormal") %></h3>
 
