@@ -84,9 +84,6 @@ namespace Concessionaria
         {
             try
             {
-                /* Lista de imagens (conta arquivos jpg, talez criar um arquivo para imagens somente do carousel 
-                ou trocar a logica para contar as imagens). Uma possibilidade é deixar o formato jpg só para o 
-                carousel (não acho tão interessante, mas funcionaria) */
                 string[] imagens = Directory.GetFiles(Server.MapPath(diretorioImagens));
                 SetQtdImagensCarousel(imagens.Length);
             }
