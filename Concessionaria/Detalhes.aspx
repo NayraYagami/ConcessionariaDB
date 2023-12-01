@@ -1,9 +1,10 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Detalhes.aspx.cs" Inherits="Concessionaria.Detalhes" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Detalhes.aspx.cs" Inherits="Concessionaria.Detalhes" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/TelaDetalhes.css" rel="stylesheet" />
     <link href="css/estilo.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -27,11 +28,11 @@
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Veiculos</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" aria-current="page" style="color: #19467E;">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">Veiculos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">About</a></li>
             </ul>
         </header>
     </div>
@@ -44,22 +45,24 @@
             <div class="col-12">
                 <section>
                     <div class="DetalhesCarro">
-                        <%-- Detalhes do Carro --%> 
-                        <asp:Image ID="imgCarroAnuncio" runat="server" AlternateText="Imagens do Carro ainda não foram incluídas no anúncio! Em breve atualizaremos o anúncio com as imagens." />
+                        <%-- Detalhes do Carro --%>
+                        <div class="ImgCarro">
+                            <asp:Image ID="imgCarroAnuncio" runat="server" AlternateText="Imagens do Carro ainda não foram incluídas no anúncio! Em breve atualizaremos o anúncio com as imagens." />
+                        </div>                        
                         <p>Ano de Fabricação </p>
-                        <h5 id="AnoFabricacaoCarroAnuncio" runat="server"/>
+                        <h5 id="AnoFabricacaoCarroAnuncio" runat="server" />
                         <p>Cor </p>
-                        <h5 id="CorCarroAnuncio" runat="server"/>
+                        <h5 id="CorCarroAnuncio" runat="server" />
                         <p>Combustível </p>
-                        <h5 id="CombustivelCarroAnuncio" runat="server"/>
+                        <h5 id="CombustivelCarroAnuncio" runat="server" />
                         <p>Quilometragem </p>
-                        <h5 id="QuilometragemCarroAnuncio" runat="server"/>
+                        <h5 id="QuilometragemCarroAnuncio" runat="server" />
                         <p>Câmbio </p>
-                        <h5 id="CambioCarroAnuncio" runat="server"/>
+                        <h5 id="CambioCarroAnuncio" runat="server" />
                         <p>Final da Placa </p>
-                        <h5 id="PlacaCarroAnuncio" runat="server"/>
+                        <h5 id="PlacaCarroAnuncio" runat="server" />
                         <h5>Descrição </h5>
-                        <p id="DescricaoCarroAnuncio" runat="server"/>
+                        <p id="DescricaoCarroAnuncio" runat="server" />
                         <%-- Detalhes do Carro --%>
                     </div>
                     <div class="SimulaParcelas">
@@ -90,27 +93,6 @@
                         <div>
                             <asp:Button ID="btnSimularParcelas" runat="server" Text="Simular Parcelas" />
                         </div>
-                            <input id="Nome" type="text" required="required" placeholder="Nome*" runat="server" />
-                        </asp:Label>
-                        <asp:Label ID="lblEmail" runat="server">
-                            <input id="Email" type="email" required="required" placeholder="E-mail*" runat="server" />
-                        </asp:Label>
-                        <asp:Label ID="lblCpf" runat="server">
-                            <input id="Cpf" type="text" required="required" placeholder="CPF ou CNPJ*" runat="server" />
-                        </asp:Label>
-                        <asp:Label ID="lblTelefone" runat="server" type="tel">
-                            <input id="Telefone" type="tel" required="required" placeholder="Telefone*" runat="server" />
-                        </asp:Label>
-                        <%-- Simula Parcelas --%>
-                    </div>
-                    <div class="checkboxConcorda">
-                        <asp:Label ID="lblConcorda" runat="server">
-                            <asp:CheckBox ID="ckbConcorda" runat="server" required="required" />
-                            <p>Concordo e estou ciente que esta é uma calculadora de simulação de financiamento e não corresponde ao valor real das parcelas mensais.</p>
-                        </asp:Label>
-                    </div>
-                    <div>
-                        <asp:Button ID="btnSimularParcelas" runat="server" Text="Simular Parcelas" />
                     </div>
                 </section>
                 <section>
@@ -128,24 +110,8 @@
                         <asp:Label ID="lblCpfContatoVendedor" runat="server">
                             <input id="CpfContatoVendedor" type="text" placeholder="CPF ou CNPJ*" runat="server" />
                         </asp:Label>
-                        <asp:Label ID="lblTelefoneContatoVendedor" runat="server" type="tel">
-                            <input id="TelContatoVendedor" type="tel" placeholder="Telefone*" runat="server" />
-                        <%--Contato com Vendedor--%>
-                        <h3>R$ <%# Eval ("PrecoNormal") %></h3>
-                        <asp:Button ID="btnVerParcelas" runat="server" Text="Ver Parcelas" />
-                        <small>Entre em contato com um vendedor</small>
-                        <asp:Label ID="lblNomeContatoVendedor" runat="server">
-                            <input id="NomeContatoVendedor" type="text" required="required" placeholder="Nome*" runat="server" />
-                        </asp:Label>
-                        <asp:Label ID="lblEmailContatoVendedor" runat="server">
-                            <input id="EmailContatoVendedor" type="email" required="required" placeholder="E-mail*" runat="server" />
-                        </asp:Label>
-                        <asp:Label ID="lblCpfContatoVendedor" runat="server">
-                            <input id="CpfContatoVendedor" type="text" required="required" placeholder="CPF ou CNPJ*" runat="server" />
-                        </asp:Label>
-                        <asp:Label ID="lblTelefoneContatoVendedor" runat="server" type="tel">
-                            <input id="TelContatoVendedor" type="tel" required="required" placeholder="Telefone*" runat="server" />
-                        </asp:Label>
+                        <asp:Label ID="lblTelefoneContatoVendedor" runat="server" type="tel" />
+                        <input id="TelContatoVendedor" type="tel" placeholder="Telefone*" runat="server" />
                         <select>
                             <option value="value">Loja</option>
                         </select>
@@ -212,7 +178,6 @@
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                             <label for="newsletter1" class="visually-hidden">Email address</label>
                             <input id="newsletter1" type="text" class="form-control" placeholder="Email address"/>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
                             <button class="btn btn-primary" type="button">Subscribe</button>
                         </div>
                     </form>
