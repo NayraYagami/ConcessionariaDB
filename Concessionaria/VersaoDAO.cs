@@ -16,5 +16,15 @@ namespace Concessionaria
 
             return versoes;
         }
+
+        internal static versao buscarVersao(int versaoId)
+        {
+            var versao = new versao();
+            using (ConcessionariaDBEntities3 ctx = new ConcessionariaDBEntities3())
+            {
+                versao = ctx.versaos.FirstOrDefault(v => v.IdVersao == versaoId); ;
+            }
+            return versao;
+        }
     }
 }

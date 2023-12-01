@@ -22,5 +22,15 @@ namespace Concessionaria
             }
             return marcas;
         }
+
+        internal static marca buscarMarca(int marcaId)
+        {
+            var marca = new marca();
+            using (ConcessionariaDBEntities3 ctx = new ConcessionariaDBEntities3())
+            {
+                marca = ctx.marcas.FirstOrDefault(m => m.IdMarca == marcaId); ;
+            }
+            return marca;
+        }
     }
 }

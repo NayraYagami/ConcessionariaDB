@@ -11,8 +11,7 @@ namespace Concessionaria
 {
     using System;
     using System.Collections.Generic;
-    using System.Data;
-
+    
     public partial class veiculo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -57,10 +56,5 @@ namespace Concessionaria
         public virtual versao versao { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<opcional> opcionals { get; set; }
-
-        public static explicit operator veiculo(DataRow v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

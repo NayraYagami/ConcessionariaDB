@@ -113,26 +113,25 @@ namespace Concessionaria
 
             if (e.Item.ItemType == ListViewItemType.DataItem)
             {
-                // Acessar o controle h5 dentro do ItemDataBound
                 var h5NomeCarroCard = (HtmlGenericControl)e.Item.FindControl("nomeCarroCard");
 
-                // Exemplo: Acessar as propriedades do objeto veiculo
                 var veiculo = (veiculo)e.Item.DataItem;
 
-                int marca = veiculo.MarcaID;
                 string modelo = veiculo.Quilometragem.ToString();
 
-                string nomeCarro = preencherNomeCarroCard(marca);
+                string nomeCarro = preencherNomeCarroCard(veiculo.VersaoID);
 
-                // Exemplo: Definir o conteúdo com base na marca e modelo
-                h5NomeCarroCard.InnerText = $"Marca: {marca}, Modelo: {modelo}";
+                h5NomeCarroCard.InnerText = nomeCarro;
             }
         }
 
-        private string preencherNomeCarroCard(int marca)
+        private string preencherNomeCarroCard(int versaoId)
         {
-            //marca marca1 = MarcaDAO.getMarcaById(marca);
-            return null;
+            versao versao = VersaoDAO.buscarVersao(versaoId);
+            modelo modelo = ModeloDAO.buscarModelo(versao.ModeloID);
+            marca marca1 = MarcaDAO.buscarMarca(modelo.MarcaID);
+
+            return marca1.Descricao + ' ' + modelo.Descricao + ' ' + versao.Descricao;
         }
     }
 }

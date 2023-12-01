@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace Concessionaria
 {
@@ -26,5 +24,6 @@ namespace Concessionaria
 
         //    return cores;
         //}
+
     }
 }
