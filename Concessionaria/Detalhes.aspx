@@ -38,13 +38,14 @@
     <!-- Header -->
 
     <!-- Body -->
-    <%--Tela de Detalhes do Carro--%>
+    <%-- Tela de Detalhes do Carro --%>
     <form method="post" runat="server">
         <div class="container">
             <div class="col-12">
                 <section>
                     <div class="DetalhesCarro">
-                        <%-- Detalhes do Carro AnoFabricacao, CorID, CombustivelID, Quilometragem, CambioID e Placa--%> 
+                        <%-- Detalhes do Carro --%> 
+                        <asp:Image ID="imgCarroAnuncio" runat="server" AlternateText="Imagens do Carro ainda não foram incluídas no anúncio! Em breve atualizaremos o anúncio com as imagens." />
                         <p>Ano de Fabricação </p>
                         <h5 id="AnoFabricacaoCarroAnuncio" runat="server"/>
                         <p>Cor </p>
@@ -93,7 +94,7 @@
                 </section>
                 <section>
                     <div class="ContatoVendedor">
-                        <%--Contato com Vendedor--%>
+                        <%-- Contato com Vendedor --%>
                         <h3 id="precoVeiculoAnuncio" runat="server"></h3>
                         <asp:Button ID="btnVerParcelas" runat="server" Text="Ver Parcelas" />
                         <small>Entre em contato com um vendedor</small>
@@ -112,13 +113,13 @@
                         <select>
                             <option value="value">Loja</option>
                         </select>
-                        <%--Contato com Vendedor--%>
+                        <%-- Contato com Vendedor --%>
                     </div>
                 </section>
             </div>
         </div>
     </form>
-    <%--Tela de Detalhes do Carro--%>
+    <%-- Tela de Detalhes do Carro --%>
 
     <!-- produtos -->
     <div>
