@@ -48,21 +48,37 @@
                         <%-- Detalhes do Carro --%>
                         <div class="ImgCarro">
                             <asp:Image ID="imgCarroAnuncio" runat="server" AlternateText="Imagens do Carro ainda não foram incluídas no anúncio! Em breve atualizaremos o anúncio com as imagens." />
-                        </div>                        
-                        <p>Ano de Fabricação </p>
-                        <h5 id="AnoFabricacaoCarroAnuncio" runat="server" />
-                        <p>Cor </p>
-                        <h5 id="CorCarroAnuncio" runat="server" />
-                        <p>Combustível </p>
-                        <h5 id="CombustivelCarroAnuncio" runat="server" />
-                        <p>Quilometragem </p>
-                        <h5 id="QuilometragemCarroAnuncio" runat="server" />
-                        <p>Câmbio </p>
-                        <h5 id="CambioCarroAnuncio" runat="server" />
-                        <p>Final da Placa </p>
-                        <h5 id="PlacaCarroAnuncio" runat="server" />
-                        <h5>Descrição </h5>
-                        <p id="DescricaoCarroAnuncio" runat="server" />
+                        </div>
+                        <div class="DadosCarro">
+                            <div class="AnoFabricacaoCarro">
+                                <p>Ano de Fabricação </p>
+                                <h5 id="AnoFabricacaoCarroAnuncio" runat="server" />
+                            </div>
+                            <div class="CorCarro">
+                                <p>Cor </p>
+                                <h5 id="CorCarroAnuncio" runat="server" />
+                            </div>
+                            <div class="CombustivelCarro">
+                                <p>Combustível </p>
+                                <h5 id="CombustivelCarroAnuncio" runat="server" />
+                            </div>
+                            <div class="QuilometragemCarro">
+                                <p>Quilometragem </p>
+                                <h5 id="QuilometragemCarroAnuncio" runat="server" />
+                            </div>
+                            <div class="CambioCarro">
+                                <p>Câmbio </p>
+                                <h5 id="CambioCarroAnuncio" runat="server" />
+                            </div>
+                            <div class="PlacaCarro">
+                                <p>Final da Placa </p>
+                                <h5 id="PlacaCarroAnuncio" runat="server" />
+                            </div>
+                        </div>
+                        <div class="descricaoCarro">
+                            <h5>Descrição </h5>
+                            <p id="DescricaoCarroAnuncio" runat="server" />
+                        </div>
                         <%-- Detalhes do Carro --%>
                     </div>
                     <div class="SimulaParcelas">
@@ -177,7 +193,7 @@
                         <p>Monthly digest of what's new and exciting from us.</p>
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                             <label for="newsletter1" class="visually-hidden">Email address</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address"/>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
                             <button class="btn btn-primary" type="button">Subscribe</button>
                         </div>
                     </form>
