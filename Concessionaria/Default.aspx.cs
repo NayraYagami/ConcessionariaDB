@@ -68,6 +68,19 @@ namespace Concessionaria
             qtdImagensCarousel = value;
         }
 
+        protected string ImagePath(object idVeiculo)
+        {
+            string imagePath = $"img/Imagens_Carros_Lv/{idVeiculo}.jpg";
+
+            if (!File.Exists(Server.MapPath(imagePath)))
+            {
+                imagePath = "img/Imagens_Carros_Lv/ImagemIndisponivel.jpg";
+            }
+
+            return imagePath;
+        }
+
+
         private void AtualizarLvVeiculos(List<veiculo> veiculos)
         {
             try

@@ -152,19 +152,19 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="card">
                                 <a class="img-veiculo" href='<%# "Detalhes.aspx?id=" + Eval("IdVeiculo") %>'>
-                                    <img src='<%# "img/Imagens_Carros_Lv/" + Eval("IdVeiculo") + ".jpg"%>' class="img-veiculo card-img-top" alt="Imagem do veículo <%# Eval ("Descricao") %>">
+                                    <img src='<%# ImagePath(Eval("IdVeiculo")) %>' class="img-veiculo card-img-top" alt="Imagem do veículo <%# Eval ("Descricao") %>">
                                 </a>
                                 <a href="#" class="btn btn-primary" style="background-color: #19467e; border-color: #19467e;">Ver Parcelas</a>
                                 <div class="card-body">
-                                    <h5 class="card-title" id="nomeCarroCard" runat="server" ></h5>
+                                    <h5 class="card-title" id="nomeCarroCard" runat="server"></h5>
                                     <p class="card-text"><%# Eval ("Quilometragem") %> KM / <%# Eval ("AnoModelo") %> / <%# Eval ("AnoFabricacao") %> </p>
                                     <h3>R$ <%# Eval ("PrecoNormal") %></h3>
-
                                 </div>
                             </div>
                         </div>
                     </ItemTemplate>
                 </asp:ListView>
+
             </div>
         </div>
     </div>
@@ -193,7 +193,7 @@
                         <p>Monthly digest of what's new and exciting from us.</p>
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                             <label for="newsletter1" class="visually-hidden">Email address</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address"/>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
                             <button class="btn btn-primary" type="button">Subscribe</button>
                         </div>
                     </form>
