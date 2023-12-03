@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="css/estilo.css" rel="stylesheet" />
+    <link href="css/Style.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Concessionária</title>
@@ -28,7 +28,7 @@
 
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="#" class="nav-link" aria-current="page" style="color: #19467E;">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">Veiculos</a></li>
+                <li class="nav-item"><a href="Default.aspx#secaoVeiculos" class="nav-link" style="color: #19467E;">Veiculos</a></li>
                 <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">Pricing</a></li>
                 <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">FAQs</a></li>
                 <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">About</a></li>
@@ -129,7 +129,7 @@
                             Seminovo 
                         </div>
                         <div class="submit">
-                            <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Ver Veículos" />
+                            <asp:Button class="custom-button" ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Ver Veículos" />
                         </div>
                     </div>
                 </form>
@@ -140,10 +140,10 @@
 
     <!-- produtos -->
     <div>
-        <div class="container">
+        <div id="secaoVeiculos" class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1 class="titulo-veiculos">Usados</h1>
+                    <h1 class="titulo-veiculos">Veículos</h1>
                 </div>
             </div>
             <div class="row">

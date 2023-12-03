@@ -191,7 +191,44 @@ input.inputFiltro {
     border-color: #19467E;
 }
 
-/*a.nav-link:hover {
-   background-color: #19467E;
+body {
+    background-color: black;
 }
-*/
+
+a.btn.btn-primary {
+    border-radius: 0;
+}
+
+.custom-button {
+    background-color: #19467e;
+    color: #fff;
+    padding: 0.625em 1.25em;
+    font-size: 1em;
+    border: none;
+    margin-top: 1em;
+    padding-left: 5.375em;
+    padding-right: 5.375em;
+    cursor: pointer;
+}
+
+    .custom-button:hover {
+        background-color: #0c3052;
+    }
+
+.checkBox {
+    margin-top: 1em;
+    padding-right: 1em;
+}
+
+    .checkBox :not(:first-child) {
+        margin-left: 0.5em;
+    }
+
+    .checkBox :first-child {
+        margin-left: 0.5em;
+    }
+
+
+.card {
+    margin-bottom: 1.5em;
+}
