@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace Concessionaria
@@ -58,6 +59,42 @@ namespace Concessionaria
             {
 
             }
+        }
+
+        protected string ImagePath(object idVeiculo)
+        {
+            string imagePath = $"img/Imagens_Carros_Lv/{idVeiculo}.jpg";
+
+            if (!File.Exists(Server.MapPath(imagePath)))
+            {
+                imagePath = "img/Imagens_Carros_Lv/ImagemIndisponivel.jpg";
+            }
+
+            return imagePath;
+        }
+
+        protected void lvVeiculos_ItemDataBound1(object sender, ListViewItemEventArgs e)
+        {
+
+            if (e.Item.ItemType == ListViewItemType.DataItem)
+            {
+                var h5NomeCarroCard = (HtmlGenericControl)e.Item.FindControl("nomeCarroCard");
+
+                var veiculo = (veiculo)e.Item.DataItem;
+
+                string nomeCarro = preencherNomeCarroCard(veiculo.VersaoID);
+
+                h5NomeCarroCard.InnerText = nomeCarro;
+            }
+        }
+
+        private string preencherNomeCarroCard(int versaoId)
+        {
+            versao versao = VersaoDAO.buscarVersao(versaoId);
+            modelo modelo = ModeloDAO.buscarModelo(versao.ModeloID);
+            marca marca1 = MarcaDAO.buscarMarca(modelo.MarcaID);
+
+            return marca1.Descricao + ' ' + modelo.Descricao + ' ' + versao.Descricao;
         }
     }
 }

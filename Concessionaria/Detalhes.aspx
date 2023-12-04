@@ -19,7 +19,7 @@
     <div class="container header">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <svg class="bi me-2" width="40" height="32">
+                <svg class="bi me-2" height="32">
                     <use xlink:href="#bootstrap" />
                 </svg>
                 <span class="fs-4">
@@ -28,11 +28,8 @@
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link" aria-current="page" style="color: #19467E;">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">Veiculos</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">About</a></li>
+                <li class="nav-item"><a href="Default.aspx" class="nav-link" aria-current="page" style="color: #19467E;">Home</a></li>
+                <li class="nav-item"><a href="Default.aspx#secaoVeiculos" class="nav-link" style="color: #19467E;">Veiculos</a></li>
             </ul>
         </header>
     </div>
@@ -83,9 +80,9 @@
                     </div>
                     <div class="SimulaParcelas">
                         <%-- Simula Parcelas --%>
-                        <small>Parcelas</small>
-                        <strong>Simule as parcelas!</strong>
-                        <p>Todos os campos são obrigatórios</p>
+                        <small class="Parcelas">Parcelas</small>
+                        <h4 class="TituloSimulaParcela">Simule as parcelas!</h4>
+                        <small class="CampoObrigatorio">Todos os campos são obrigatórios</small>
                         <div class="UsuarioSimulaParcelas">
                             <asp:Label ID="lblNome" runat="server">
                                 <input id="Nome" type="text" placeholder="Nome*" runat="server" />
@@ -115,29 +112,38 @@
                         </div>
                     </div>
                 </section>
-                <section class="ContatoVendedorAnuncio">
-                    <div class="ContatoVendedor">
-                        <%-- Contato com Vendedor --%>
-                        <h3 id="precoVeiculoAnuncio" runat="server"></h3>
-                        <asp:Button ID="btnVerParcelas" runat="server" Text="Ver Parcelas" />
-                        <small>Entre em contato com um vendedor</small>
-                        <asp:Label ID="lblNomeContatoVendedor" runat="server">
-                            <input id="NomeContatoVendedor" type="text" placeholder="Nome*" runat="server" />
-                        </asp:Label>
-                        <asp:Label ID="lblEmailContatoVendedor" runat="server">
-                            <input id="EmailContatoVendedor" type="email" placeholder="E-mail*" runat="server" />
-                        </asp:Label>
-                        <asp:Label ID="lblCpfContatoVendedor" runat="server">
-                            <input id="CpfContatoVendedor" type="text" placeholder="CPF ou CNPJ*" runat="server" />
-                        </asp:Label>
-                        <asp:Label ID="lblTelefoneContatoVendedor" runat="server" type="tel" />
-                        <input id="TelContatoVendedor" type="tel" placeholder="Telefone*" runat="server" />
-                        <select>
-                            <option value="value">Loja</option>
-                        </select>
-                        <%-- Contato com Vendedor --%>
-                    </div>
-                </section>
+                <div class="SideContatoVendedor">
+                    <section class="ContatoVendedorAnuncio">
+                        <div class="ContatoVendedor">
+                            <%-- Contato com Vendedor --%>
+                            <div class="PrecoSubtitulo">
+                                <h3 id="precoVeiculoAnuncio" runat="server"></h3>
+                                <div class="btnVerParcelas">
+                                    <asp:Button ID="btnVerParcelas" runat="server" Text="Ver Parcelas" />
+                                </div>
+                            </div>
+                            <small class="msgContato">Entre em contato com um vendedor</small>
+                            <asp:Label ID="lblNomeContatoVendedor" runat="server">
+                                <input id="NomeContatoVendedor" type="text" placeholder="Nome*" runat="server" />
+                            </asp:Label>
+                            <asp:Label ID="lblEmailContatoVendedor" runat="server">
+                                <input id="EmailContatoVendedor" type="email" placeholder="E-mail*" runat="server" />
+                            </asp:Label>
+                            <asp:Label ID="lblCpfContatoVendedor" runat="server">
+                                <input id="CpfContatoVendedor" type="text" placeholder="CPF ou CNPJ*" runat="server" />
+                            </asp:Label>
+                            <asp:Label ID="lblTelefoneContatoVendedor" runat="server" type="tel" />
+                            <input id="TelContatoVendedor" type="tel" placeholder="Telefone*" runat="server" />
+                            <select class="SelecionaLoja">
+                                <option value="value">Loja</option>
+                            </select>
+                            <div class="btnEnviarMensagem">
+                                <asp:Button ID="btnEnviarMensagem" runat="server" Text="Enviar Mensagem" />
+                            </div>
+                            <%-- Contato com Vendedor --%>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     </form>
@@ -145,23 +151,23 @@
 
     <!-- produtos -->
     <div>
-        <div class="container">
+        <div id="secaoVeiculos" class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1 class="titulo-veiculos">Veículos Vistos</h1>
+                    <h1 class="titulo-veiculos">Veículos</h1>
                 </div>
             </div>
             <div class="row">
-                <asp:ListView runat="server" ID="lvVeiculos">
+                <asp:ListView runat="server" ID="lvVeiculos" OnItemDataBound="lvVeiculos_ItemDataBound1">
                     <ItemTemplate>
                         <div class="col-lg-3 col-sm-6">
                             <div class="card">
                                 <a class="img-veiculo" href='<%# "Detalhes.aspx?id=" + Eval("IdVeiculo") %>'>
-                                    <img src='<%# "img/Imagens_Carros_Lv/" + Eval("IdVeiculo") + ".jpg"%>' class="img-veiculo card-img-top" alt="Imagem do veículo <%# Eval ("Descricao") %>">
+                                    <img src='<%# ImagePath(Eval("IdVeiculo")) %>' class="img-veiculo card-img-top" alt="Imagem do veículo <%# Eval ("Descricao") %>">
                                 </a>
-                                <a href="#" class="btn btn-primary">Ver Parcelas</a>
+                                <a href="#" class="btn btn-primary" style="background-color: #19467e; border-color: #19467e;">Ver Parcelas</a>
                                 <div class="card-body">
-                                    <h5 class="card-title"><%# Eval ("Descricao") %></h5>
+                                    <h5 class="card-title" id="nomeCarroCard" runat="server"></h5>
                                     <p class="card-text"><%# Eval ("Quilometragem") %> KM / <%# Eval ("AnoModelo") %> / <%# Eval ("AnoFabricacao") %> </p>
                                     <h3>R$ <%# Eval ("PrecoNormal") %></h3>
                                 </div>
@@ -170,10 +176,10 @@
                     </ItemTemplate>
                 </asp:ListView>
             </div>
-            <div class="seemore_bt"><a href="#">See More</a></div>
         </div>
     </div>
     <!-- Produtos -->
+
     <!-- Body -->
 
     <!-- Footer -->
@@ -181,31 +187,27 @@
         <footer class="py-5">
             <div class="row">
                 <div class="col-6 col-md-2 mb-3">
-                    <h5>Section</h5>
+                    <h5>Mini Menu</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" aria-current="page" style="color: #19467E;">Home</a></li>
+                        <li class="nav-item"><a href="Default.aspx#secaoVeiculos" class="nav-link" style="color: #19467E;">Veiculos</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-5 offset-md-1 mb-3">
                     <form>
-                        <h5>Subscribe to our newsletter</h5>
-                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <h5>Inscreva-se em nosso canal</h5>
+                        <p>Nossas novidades diretamente para sua caixa de email ;)</p>
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                            <label for="newsletter1" class="visually-hidden">Email address</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
-                            <button class="btn btn-primary" type="button">Subscribe</button>
+                            <label for="newsletter1" class="visually-hidden">Endereço de email</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Endereço de email" />
+                            <button class="btn btn-primary" style="background-color: #19467E; border-color: #19467E;" type="button">Inscrever</button>
                         </div>
                     </form>
                 </div>
             </div>
-
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+                <p>&copy; Todos os direitos reservados.</p>
             </div>
         </footer>
     </div>
