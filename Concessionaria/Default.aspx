@@ -29,9 +29,6 @@
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="#" class="nav-link" aria-current="page" style="color: #19467E;">Home</a></li>
                 <li class="nav-item"><a href="Default.aspx#secaoVeiculos" class="nav-link" style="color: #19467E;">Veiculos</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="color: #19467E;">About</a></li>
             </ul>
         </header>
     </div>
@@ -177,31 +174,27 @@
         <footer class="py-5">
             <div class="row">
                 <div class="col-6 col-md-2 mb-3">
-                    <h5>Section</h5>
+                    <h5>Mini Menu</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" aria-current="page" style="color: #19467E;">Home</a></li>
+                        <li class="nav-item"><a href="Default.aspx#secaoVeiculos" class="nav-link" style="color: #19467E;">Veiculos</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-5 offset-md-1 mb-3">
                     <form>
-                        <h5>Subscribe to our newsletter</h5>
-                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <h5>Inscreva-se em nosso canal</h5>
+                        <p>Nossas novidades diretamente para sua caixa de email ;)</p>
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                            <label for="newsletter1" class="visually-hidden">Email address</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
-                            <button class="btn btn-primary" type="button">Subscribe</button>
+                            <label for="newsletter1" class="visually-hidden">Endereço de email</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Endereço de email" />
+                            <button class="btn btn-primary" style="background-color: #19467E; border-color: #19467E;" type="button">Inscrever</button>
                         </div>
                     </form>
                 </div>
             </div>
-
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+                <p>&copy; Todos os direitos reservados.</p>
             </div>
         </footer>
     </div>
