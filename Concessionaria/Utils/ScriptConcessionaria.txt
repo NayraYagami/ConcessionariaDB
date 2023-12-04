@@ -142,6 +142,18 @@ SET IDENTITY_INSERT [dbo].[modelo] OFF
 INSERT INTO [dbo].[opcional] ([IdOpcional], [Descricao]) VALUES (1, N'Vidro El trico')
 INSERT INTO [dbo].[usuario] ([IdUsuario], [Email], [Senha], [DataCadastro], [DataUltimoAcesso], [Ativo]) VALUES (1, N'admin@hotmail.com', N'7C4A8D09CA3762AF61E59520943DC26494F8941B', N'2023-10-14 14:47:24', N'2023-10-27 15:53:24', 1)
 
+INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Sporting 1.4', 15, 1)
+INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Touring 2.0', 16, 2)
+INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Titanium 1.6', 17, 3)
+INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'SL 2.5', 18, 4)
+INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Authentique 1.0', 19, 5)
+INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'GLS 2.0', 20, 6)
+INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Laramie 5.7', 21, 7)
+INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Sahara 3.6', 22, 8)
+INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Exclusive 1.6', 23, 9)
+INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'EX 2.0', 24, 10)
+INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Griffe 1.6', 25, 11)
+
 INSERT INTO [dbo].[veiculo] ([IdVeiculo], [AnoFabricacao], [AnoModelo], [BlindagemID], [CambioID], [CombustivelID], [CorID], [VersaoID], [Placa], [Portas], [Quilometragem], [PrecoNormal], [Acessos], [Destaque], [DataCadastro], [Descricao], [AceitaPermuta], [VeiculoComDivida], [CondicaoPagamento], [Ranking], [PrecoPromocional], [UsuarioID], [QtdeEstoque], [CategoriaID], [MarcaID]) VALUES (12, 2020, 2021, 2, 2, 2, 2, 1, N'ABC-1111', 4, 20000, CAST(60000.00 AS Decimal(18, 2)), 0, 1, N'2023-12-03 18:45:00', N'Carro esportivo em excelente estado', 1, 0, N'À vista ou financiado', CAST(4.70 AS Decimal(18, 2)), CAST(58000.00 AS Decimal(18, 2)), 1, 2, 5, 3)
 INSERT INTO [dbo].[veiculo] ([IdVeiculo], [AnoFabricacao], [AnoModelo], [BlindagemID], [CambioID], [CombustivelID], [CorID], [VersaoID], [Placa], [Portas], [Quilometragem], [PrecoNormal], [Acessos], [Destaque], [DataCadastro], [Descricao], [AceitaPermuta], [VeiculoComDivida], [CondicaoPagamento], [Ranking], [PrecoPromocional], [UsuarioID], [QtdeEstoque], [CategoriaID], [MarcaID]) VALUES (14, 2021, 2022, 2, 2, 2, 2, 3, N'ABC-3333', 4, 25000, CAST(55000.00 AS Decimal(18, 2)), 0, 1, N'2023-12-03 20:15:00', N'Carro familiar em excelente estado', 1, 0, N'À vista ou financiado', CAST(4.80 AS Decimal(18, 2)), CAST(53000.00 AS Decimal(18, 2)), 1, 2, 5, 6)
 INSERT INTO [dbo].[veiculo] ([IdVeiculo], [AnoFabricacao], [AnoModelo], [BlindagemID], [CambioID], [CombustivelID], [CorID], [VersaoID], [Placa], [Portas], [Quilometragem], [PrecoNormal], [Acessos], [Destaque], [DataCadastro], [Descricao], [AceitaPermuta], [VeiculoComDivida], [CondicaoPagamento], [Ranking], [PrecoPromocional], [UsuarioID], [QtdeEstoque], [CategoriaID], [MarcaID]) VALUES (16, 2020, 2021, 2, 2, 2, 4, 5, N'ABC-5555', 4, 20000, CAST(60000.00 AS Decimal(18, 2)), 0, 1, N'2023-12-03 22:45:00', N'Carro sedan em excelente estado', 1, 0, N'À vista ou financiado', CAST(4.70 AS Decimal(18, 2)), CAST(58000.00 AS Decimal(18, 2)), 1, 2, 5, 5)
@@ -160,17 +172,7 @@ INSERT INTO [dbo].[veiculo] ([IdVeiculo], [AnoFabricacao], [AnoModelo], [Blindag
 INSERT INTO [dbo].[veiculo] ([IdVeiculo], [AnoFabricacao], [AnoModelo], [BlindagemID], [CambioID], [CombustivelID], [CorID], [VersaoID], [Placa], [Portas], [Quilometragem], [PrecoNormal], [Acessos], [Destaque], [DataCadastro], [Descricao], [AceitaPermuta], [VeiculoComDivida], [CondicaoPagamento], [Ranking], [PrecoPromocional], [UsuarioID], [QtdeEstoque], [CategoriaID], [MarcaID]) VALUES (30, 2016, 2017, 2, 2, 2, 4, 7, N'ABC-2020', 4, 22000, CAST(60000.00 AS Decimal(18, 2)), 0, 1, N'2023-12-04 12:15:00', N'Carro sedan compacto em excelente estado', 1, 0, N'À vista ou financiado', CAST(4.80 AS Decimal(18, 2)), CAST(58000.00 AS Decimal(18, 2)), 1, 2, 5, 9)
 INSERT INTO [dbo].[veiculo] ([IdVeiculo], [AnoFabricacao], [AnoModelo], [BlindagemID], [CambioID], [CombustivelID], [CorID], [VersaoID], [Placa], [Portas], [Quilometragem], [PrecoNormal], [Acessos], [Destaque], [DataCadastro], [Descricao], [AceitaPermuta], [VeiculoComDivida], [CondicaoPagamento], [Ranking], [PrecoPromocional], [UsuarioID], [QtdeEstoque], [CategoriaID], [MarcaID]) VALUES (31, 2015, 2016, 2, 2, 2, 5, 8, N'XYZ-2121', 4, 25000, CAST(55000.00 AS Decimal(18, 2)), 0, 1, N'2023-12-04 13:30:00', N'Carro sedan luxuoso em excelente estado', 1, 0, N'À vista ou financiado', CAST(4.50 AS Decimal(18, 2)), CAST(53000.00 AS Decimal(18, 2)), 1, 2, 5, 10)
 
-INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Sporting 1.4', 15, 1)
-INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Touring 2.0', 16, 2)
-INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Titanium 1.6', 17, 3)
-INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'SL 2.5', 18, 4)
-INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Authentique 1.0', 19, 5)
-INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'GLS 2.0', 20, 6)
-INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Laramie 5.7', 21, 7)
-INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Sahara 3.6', 22, 8)
-INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Exclusive 1.6', 23, 9)
-INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'EX 2.0', 24, 10)
-INSERT INTO [dbo].[versao] ([Descricao], [ModeloID], [IdVersao]) VALUES (N'Griffe 1.6', 25, 11)
+
 
 
 
