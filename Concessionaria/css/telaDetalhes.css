@@ -1,3 +1,73 @@
 ﻿img#imgCarroAnuncio {
     width: 65%;
 }
+
+.ImgCarro {
+    margin-top: -25px;
+    display: flex;
+    justify-content: center;
+}
+
+.DadosCarro {
+    margin-top: 2em;
+    display: flex;
+    padding: 3em 2em;
+    justify-content: space-evenly;
+    background-color: white;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.descricaoCarro {
+    background-color: white;
+    padding: 1em 3em;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.SimulaParcelas {
+    margin-top: 2em;
+    padding: 3em 2em;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.UsuarioSimulaParcelas {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+    align-items: center;
+}
+
+input#Nome, input#Email, input#Cpf, input#Telefone {
+    width: 100%;
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+}
+
+span#lblNome, span#lblEmail, span#lblCpf, span#lblTelefone {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0px 16px;
+    width: 48%;
+    height: 2.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-weight: 500;
+    align-items: center;
+    color: #19467E;
+    border: 1px solid #19467E;
+    cursor: pointer;
+    outline: none;
+}
+
+span#lblConcorda {
+    display: inline-flex;
+    align-items: baseline;
+}
+
+p.TermoSimulaParcela {
+    padding-left: 1em;
+}

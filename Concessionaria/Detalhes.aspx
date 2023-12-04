@@ -86,32 +86,36 @@
                         <small>Parcelas</small>
                         <strong>Simule as parcelas!</strong>
                         <p>Todos os campos são obrigatórios</p>
-                        <asp:Label ID="lblNome" runat="server">
-                            <input id="Nome" type="text" placeholder="Nome*" runat="server" />
-                        </asp:Label>
-                        <asp:Label ID="lblEmail" runat="server">
-                            <input id="Email" type="email" placeholder="E-mail*" runat="server" />
-                        </asp:Label>
-                        <asp:Label ID="lblCpf" runat="server">
-                            <input id="Cpf" type="text" placeholder="CPF ou CNPJ*" runat="server" />
-                        </asp:Label>
-                        <asp:Label ID="lblTelefone" runat="server" type="tel">
-                            <input id="Telefone" type="tel" placeholder="Telefone*" runat="server" />
-                        </asp:Label>
+                        <div class="UsuarioSimulaParcelas">
+                            <asp:Label ID="lblNome" runat="server">
+                                <input id="Nome" type="text" placeholder="Nome*" runat="server" />
+                            </asp:Label>
+                            <asp:Label ID="lblEmail" runat="server">
+                                <input id="Email" type="email" placeholder="E-mail*" runat="server" />
+                            </asp:Label>
+                        </div>
+                        <div class="UsuarioSimulaParcelas">
+                            <asp:Label ID="lblCpf" runat="server">
+                                <input id="Cpf" type="text" placeholder="CPF ou CNPJ*" runat="server" />
+                            </asp:Label>
+                            <asp:Label ID="lblTelefone" runat="server" type="tel">
+                                <input id="Telefone" type="tel" placeholder="Telefone*" runat="server" />
+                            </asp:Label>
+                        </div>
                         <%-- Simula Parcelas --%>
 
                         <div class="checkboxConcorda">
                             <asp:Label ID="lblConcorda" runat="server">
                                 <asp:CheckBox ID="ckbConcorda" runat="server" />
-                                <p>Concordo e estou ciente que esta é uma calculadora de simulação de financiamento e não corresponde ao valor real das parcelas mensais.</p>
+                                <p class="TermoSimulaParcela">Concordo e estou ciente que esta é uma calculadora de simulação de financiamento e não corresponde ao valor real das parcelas mensais.</p>
                             </asp:Label>
                         </div>
-                        <div>
+                        <div class="btnSimularParcelasAnuncio">
                             <asp:Button ID="btnSimularParcelas" runat="server" Text="Simular Parcelas" />
                         </div>
                     </div>
                 </section>
-                <section>
+                <section class="ContatoVendedorAnuncio">
                     <div class="ContatoVendedor">
                         <%-- Contato com Vendedor --%>
                         <h3 id="precoVeiculoAnuncio" runat="server"></h3>
