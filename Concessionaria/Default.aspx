@@ -29,6 +29,7 @@
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="Default.aspx" class="nav-link" aria-current="page" style="color: #19467E;">Home</a></li>
                 <li class="nav-item"><a href="Default.aspx#secaoVeiculos" class="nav-link" style="color: #19467E;">Veiculos</a></li>
+                <li class="nav-item"><a href="Default.aspx#buscarCarro" class="nav-link" style="color: #19467E;">Filtros</a></li>
             </ul>
         </header>
     </div>
@@ -98,7 +99,7 @@
                 <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_citroen.svg" alt="CITROEN" style="width: 4%;" />
                 <img class="imgMarcas" src="img/Logo_MarcaCarro/logo_kia.svg" alt="KIA" style="width: 4%;" />
             </div>
-            <div class="buscarCarro">
+            <div id="buscarCarro" class="buscarCarro">
                 <h2 class="filtro">ENCONTRE SEU VEÍCULO</h2>
                 <form runat="server">
                     <div class="filtros">
