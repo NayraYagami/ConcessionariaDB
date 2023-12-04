@@ -62,9 +62,9 @@ body {
 }
 
 a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-body-emphasis.text-decoration-none {
-    margin-right: 50% !important;
+    margin-right: 60% !important;
+    margin-left: -15%;
 }
-
 /*NÃO TA FUNCUINANDO E TO BRAVA JA COM ESSE TREM*/
 /*NÃO VOU MEXER NESSE AGORA*/
 .mb-4 {
