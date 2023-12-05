@@ -45,6 +45,8 @@ namespace Concessionaria
                 var finalPlaca = veiculo.Placa[veiculo.Placa.Length - 1];
                 PlacaCarroAnuncio.InnerText = finalPlaca.ToString();
                 DescricaoCarroAnuncio.InnerText = veiculo.Descricao.ToString();
+                TituloAnuncioCarro.InnerText = preencherNomeCarroCard(veiculo.VersaoID);
+
             }
         }
 

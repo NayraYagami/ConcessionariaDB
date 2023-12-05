@@ -48,7 +48,7 @@
                             <asp:Image ID="imgCarroAnuncio" runat="server" AlternateText="Imagens do Carro ainda não foram incluídas no anúncio! Em breve atualizaremos o anúncio com as imagens." />
                         </div>                       
                         <div class="TituloAnuncio">
-                            <h5></h5>
+                            <h5 runat="server" id="TituloAnuncioCarro"></h5>
                         </div>
                         <div class="DadosCarro">
                             <div class="AnoFabricacaoCarro">
