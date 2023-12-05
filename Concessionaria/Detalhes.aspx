@@ -28,8 +28,9 @@
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="Default.aspx" class="nav-link" aria-current="page" style="color: #19467E;">Home</a></li>
+                <li class="nav-item"><a href="Default.aspx" class="nav-link" aria-current="page" style="color: #19467E;">Página Inicial</a></li>
                 <li class="nav-item"><a href="Default.aspx#secaoVeiculos" class="nav-link" style="color: #19467E;">Veiculos</a></li>
+                <li class="nav-item"><a href="Default.aspx#buscarCarro" class="nav-link" style="color: #19467E;">Filtros</a></li>
             </ul>
         </header>
     </div>
@@ -45,6 +46,9 @@
                         <%-- Detalhes do Carro --%>
                         <div class="ImgCarro">
                             <asp:Image ID="imgCarroAnuncio" runat="server" AlternateText="Imagens do Carro ainda não foram incluídas no anúncio! Em breve atualizaremos o anúncio com as imagens." />
+                        </div>                       
+                        <div class="TituloAnuncio">
+                            <h5></h5>
                         </div>
                         <div class="DadosCarro">
                             <div class="AnoFabricacaoCarro">
