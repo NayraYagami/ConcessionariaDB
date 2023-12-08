@@ -20,7 +20,6 @@ img#imgCarroAnuncio {
 
 .dadosCarrosss {
     display: flex;
-    margin-top: 2em;
     padding: 3em 2em;
     justify-content: space-evenly;
 }
@@ -88,7 +87,7 @@ p.TermoSimulaParcela {
     width: 50%;
     height: 50%;
     position: sticky;
-    top: 28.9em;
+    top: 27.9em;
 }
 
 span#lblNome, span#lblCpf {
@@ -196,4 +195,8 @@ div#secaoVeiculos {
     margin-left: 3em;
     margin-top: 1em;
     padding-top: 2em;
+}
+
+.AnoFabricacaoCarro {
+    margin-left: -2em;
 }
