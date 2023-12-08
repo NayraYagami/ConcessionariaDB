@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="css/TelaDetalhes.css" rel="stylesheet" />
+    <link href="css/telaDetalhes.css" rel="stylesheet" />
     <link href="css/estilo.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -46,34 +46,36 @@
                         <%-- Detalhes do Carro --%>
                         <div class="ImgCarro">
                             <asp:Image ID="imgCarroAnuncio" runat="server" AlternateText="Imagens do Carro ainda não foram incluídas no anúncio! Em breve atualizaremos o anúncio com as imagens." />
-                        </div>                       
-                        <div class="TituloAnuncio">
-                            <h5 runat="server" id="TituloAnuncioCarro"></h5>
                         </div>
-                        <div class="DadosCarro">
-                            <div class="AnoFabricacaoCarro">
-                                <p>Ano de Fabricação </p>
-                                <h5 id="AnoFabricacaoCarroAnuncio" runat="server" />
+                        <div class="dadosCarro">
+                            <div class="TituloAnuncio">
+                                <h5 runat="server" id="TituloAnuncioCarro"></h5>
                             </div>
-                            <div class="CorCarro">
-                                <p>Cor </p>
-                                <h5 id="CorCarroAnuncio" runat="server" />
-                            </div>
-                            <div class="CombustivelCarro">
-                                <p>Combustível </p>
-                                <h5 id="CombustivelCarroAnuncio" runat="server" />
-                            </div>
-                            <div class="QuilometragemCarro">
-                                <p>Quilometragem </p>
-                                <h5 id="QuilometragemCarroAnuncio" runat="server" />
-                            </div>
-                            <div class="CambioCarro">
-                                <p>Câmbio </p>
-                                <h5 id="CambioCarroAnuncio" runat="server" />
-                            </div>
-                            <div class="PlacaCarro">
-                                <p>Final da Placa </p>
-                                <h5 id="PlacaCarroAnuncio" runat="server" />
+                            <div class="dadosCarrosss">
+                                <div class="AnoFabricacaoCarro">
+                                    <p>Ano de Fabricação </p>
+                                    <h5 id="AnoFabricacaoCarroAnuncio" runat="server" />
+                                </div>
+                                <div class="CorCarro">
+                                    <p>Cor </p>
+                                    <h5 id="CorCarroAnuncio" runat="server" />
+                                </div>
+                                <div class="CombustivelCarro">
+                                    <p>Combustível </p>
+                                    <h5 id="CombustivelCarroAnuncio" runat="server" />
+                                </div>
+                                <div class="QuilometragemCarro">
+                                    <p>Quilometragem </p>
+                                    <h5 id="QuilometragemCarroAnuncio" runat="server" />
+                                </div>
+                                <div class="CambioCarro">
+                                    <p>Câmbio </p>
+                                    <h5 id="CambioCarroAnuncio" runat="server" />
+                                </div>
+                                <div class="PlacaCarro">
+                                    <p>Final da Placa </p>
+                                    <h5 id="PlacaCarroAnuncio" runat="server" />
+                                </div>
                             </div>
                         </div>
                         <div class="descricaoCarro">

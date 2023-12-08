@@ -48,8 +48,8 @@ body {
 }
 
 .img-veiculo {
-    max-height: 10.5em; /* Substitua 200px pelo valor desejado */
-    width: auto; /* Garante que a largura seja ajustada proporcionalmente à altura */
+    max-height: 10.5em; 
+    width: auto; 
 }
 
 .justify-content-center {
@@ -65,8 +65,7 @@ a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-body-emphasis.text-deco
     margin-right: 60% !important;
     margin-left: -15%;
 }
-/*NÃO TA FUNCUINANDO E TO BRAVA JA COM ESSE TREM*/
-/*NÃO VOU MEXER NESSE AGORA*/
+
 .mb-4 {
     margin-bottom: 0px !important;
 }

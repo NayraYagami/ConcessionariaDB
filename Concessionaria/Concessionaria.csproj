@@ -90,6 +90,7 @@
       <LastGenOutput>ConcessionariaModel.cs</LastGenOutput>
     </Content>
     <Content Include="css\estilo.css" />
+    <Content Include="css\telaDetalhes.css" />
     <Content Include="Default.aspx" />
     <Content Include="Detalhes.aspx" />
     <Content Include="img\Imagens_Carousel\BannerBlackNovember.png" />
