@@ -152,7 +152,7 @@
                                 <a class="img-veiculo" href='<%# "Detalhes.aspx?id=" + Eval("IdVeiculo") %>'>
                                     <img src='<%# ImagePath(Eval("IdVeiculo")) %>' class="img-veiculo card-img-top" alt="Imagem do veículo <%# Eval ("Descricao") %>">
                                 </a>
-                                <a href="#" class="btn btn-primary" style="background-color: #19467e; border-color: #19467e;">Ver Parcelas</a>
+                                <a href='<%# "Detalhes.aspx?id=" + Eval("IdVeiculo") %>' class="btn btn-primary" style="background-color: #19467e; border-color: #19467e;">Ver Parcelas</a>
                                 <div class="card-body">
                                     <h5 class="card-title" id="nomeCarroCard" runat="server"></h5>
                                     <p class="card-text"><%# Eval ("Quilometragem") %> KM / <%# Eval ("AnoModelo") %> / <%# Eval ("AnoFabricacao") %> </p>

@@ -122,12 +122,14 @@
     <Compile Include="cambio.cs">
       <DependentUpon>ConcessionariaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CambioDAO.cs" />
     <Compile Include="categoria.cs">
       <DependentUpon>ConcessionariaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="combustivel.cs">
       <DependentUpon>ConcessionariaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CombustivelDAO.cs" />
     <Compile Include="ConcessionariaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -146,6 +148,7 @@
     <Compile Include="cor.cs">
       <DependentUpon>ConcessionariaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CorDAO.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
